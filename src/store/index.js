@@ -15,7 +15,6 @@ export default new Vuex.Store({
       return new Promise(res => {
         auth.onAuthStateChanged(user => {
           state.user = user || null
-          console.log(user)
           res(user)
         })
       })

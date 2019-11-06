@@ -22,8 +22,8 @@
         </v-flex>
         <v-flex xs12>
           <v-container grid-list-xl>
-            <v-layout row wrap align-center>
-              <v-flex xs12 md4>
+            <v-layout row wrap justify-center align-center>
+              <v-flex xs7 sm6 md4>
                 <v-card>
                   <v-card-text class="text-center">
                     <v-icon x-large class="primary--text">fa-network-wired</v-icon>
@@ -37,7 +37,7 @@
                   </v-card-text>
                 </v-card>
               </v-flex>
-              <v-flex xs12 md4>
+              <v-flex xs7 sm6 md4>
                 <v-card>
                   <v-card-text class="text-center">
                     <v-icon x-large class="primary--text">fa-chart-line</v-icon>
@@ -51,7 +51,7 @@
                   </v-card-text>
                 </v-card>
               </v-flex>
-              <v-flex xs12 md4>
+              <v-flex xs7 sm6 md4>
                 <v-card>
                   <v-card-text class="text-center">
                     <v-icon x-large class="primary--text">fa-sync-alt</v-icon>
@@ -106,7 +106,7 @@
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
               <v-flex v-for="person in team" :key="person.name" xs12 md4>
-                <v-card class="pa-2 mx-2">
+                <v-card class="pa-2 mx-2" height="100">
                   <v-list-item>
                     <v-list-item-avatar color="primary lighten-1"></v-list-item-avatar>
                     <v-list-item-content>
@@ -127,7 +127,7 @@
           <div class="white--text ml-4">
             Made with
             <v-icon class="red--text">mdi-heart</v-icon>
-            by using <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a> and <a class="white--text" target="__blank" href="https://vuejs.org/">VueJS</a>
+            using <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a> and <a class="white--text" target="__blank" href="https://vuejs.org/">VueJS</a>
           </div>
         </v-flex>
       </v-layout>

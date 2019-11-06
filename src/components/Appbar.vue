@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app hide-on-scroll>
+  <v-app-bar app dark hide-on-scroll>
     <v-toolbar-title class="headline success--text">
       <v-btn icon @click="$router.push('/')">
         <v-icon color="primary">fa-tractor</v-icon>
@@ -13,17 +13,53 @@
     <v-btn color="primary" text to="/Forum">
       <span class="pa-1">Forum</span>
     </v-btn>
-    <div v-if="show">
-      <v-btn v-if="user" color="primary" text @click="$store.dispatch('logout')">
-        <span class="pa-1">Logout</span>
-      </v-btn>
-      <v-btn v-if="!user" color="primary" text to="/Login">
-        <span class="pa-1">Login</span>
-      </v-btn>
-      <v-btn v-if="!user" color="primary" text to="/Register">
-        <span class="pa-1">Register</span>
-      </v-btn>
-    </div>
+    <v-menu v-if="user" open-on-hover bottom origin="top right" transition="scale-transition">
+      <template v-slot:activator="{ on }">
+        <v-btn color="primary" text v-on="on">
+          Account
+        </v-btn>
+      </template>
+
+      <v-card flat dense outlined>
+        <v-list dense color="transparent">
+          <v-list-item>
+            <v-list-item-avatar color="primary" small>
+              <v-icon small>fa-user</v-icon>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>{{ user.displayName }}</v-list-item-title>
+              <v-list-item-subtitle class="font-weight-light"> {{ user.email }}</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <v-divider></v-divider>
+        <v-list dense shaped>
+          <v-list-item to="/Dashboard">
+            <v-list-item-icon>
+              <v-icon color="primary" small>fa-tachometer-alt</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="primary--text font-weight-light">Dashboard</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item @click="$store.dispatch('logout')">
+            <v-list-item-icon>
+              <v-icon small color="deep-orange">fa-sign-out-alt</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="deep-orange--text font-weight-light">Logout</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-card>
+    </v-menu>
+    <v-btn v-if="!user" color="primary" text to="/Login">
+      <span class="pa-1">Login</span>
+    </v-btn>
+    <v-btn v-if="!user" color="primary" text to="/Register">
+      <span class="pa-1">Register</span>
+    </v-btn>
   </v-app-bar>
 </template>
 <script>
