@@ -4,11 +4,14 @@
       <sidebar />
     </v-flex>
     <v-flex>
-      <v-card class="pa-2">
+      <v-card dense class="pa-2">
         <v-row class="fill-height">
           <v-col>
             <v-sheet height="64">
               <v-toolbar flat color="white">
+                <v-btn color="primary" dense x-small class="mr-4" @click="dialog = true">
+                  Add schedule
+                </v-btn>
                 <v-btn outlined dense x-small class="mr-4" @click="setToday">
                   Today
                 </v-btn>
@@ -44,6 +47,30 @@
                 </v-menu>
               </v-toolbar>
             </v-sheet>
+
+            <v-dialog v-model="dialog" dense max-width="500">
+              <v-card>
+                <v-toolbar color="primary" dark flat dense>
+                  <v-toolbar-title>Add new schedule</v-toolbar-title>
+                </v-toolbar>
+                <v-container>
+                  <v-form>
+                    <v-text-field v-model="addEventData.name" dense type="text" label="Schedule name (required)"></v-text-field>
+                    <v-text-field v-model="addEventData.details" dense type="text" label="Details"></v-text-field>
+                    <v-text-field v-model="addEventData.start" dense type="date" label="Start (required)"></v-text-field>
+                    <v-text-field v-model="addEventData.end" dense type="date" label="End (required)"></v-text-field>
+                    <v-color-picker v-model="addEventData.color" mode="hexa"></v-color-picker>
+                  </v-form>
+                </v-container>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn type="submit" small outlined color="primary" text @click="addEvent(addEventData)">
+                    Save
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+
             <v-sheet height="500">
               <v-calendar
                 ref="calendar"
@@ -59,27 +86,29 @@
                 @click:date="viewDay"
                 @change="updateRange"
               ></v-calendar>
-              <v-menu v-model="selectedOpen" :close-on-content-click="false" :activator="selectedElement" full-width offset-x>
-                <v-card color="grey lighten-4" min-width="350px" flat>
-                  <v-toolbar :color="selectedEvent.color" dark>
-                    <v-btn icon>
-                      <v-icon>mdi-pencil</v-icon>
+              <v-menu v-model="selectedOpen" :close-on-content-click="false" :activator="selectedElement" offset-x>
+                <v-card dense color="grey lighten-4" min-width="350px" flat>
+                  <v-toolbar :color="selectedEvent.color" dark dense>
+                    <v-btn icon @click="deleteEvent(selectedEvent.id)">
+                      <v-icon color="red">mdi-delete</v-icon>
                     </v-btn>
-                    <v-toolbar-title v-html="selectedEvent.name"></v-toolbar-title>
-                    <v-spacer></v-spacer>
-                    <v-btn icon>
-                      <v-icon>mdi-heart</v-icon>
-                    </v-btn>
-                    <v-btn icon>
-                      <v-icon>mdi-dots-vertical</v-icon>
-                    </v-btn>
+                    <v-toolbar-title v-text="selectedEvent.name"></v-toolbar-title>
                   </v-toolbar>
                   <v-card-text>
-                    <span v-html="selectedEvent.details"></span>
+                    <v-form v-if="currentlyEditing !== selectedEvent.id">
+                      <span v-text="selectedEvent.details"></span>
+                    </v-form>
+                    <v-form v-else>
+                      <v-textarea v-model="selectedEvent.details" solo label="Add event"></v-textarea>
+                    </v-form>
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn text color="secondary" @click="selectedOpen = false">
-                      Cancel
+                    <v-spacer></v-spacer>
+                    <v-btn text small outlined color="primary" @click="currentlyEditing ? updateEvent(selectedEvent) : (currentlyEditing = selectedEvent.id)">
+                      {{ currentlyEditing ? "Save" : "Edit" }}
+                    </v-btn>
+                    <v-btn text small outlined color="deep-orange" @click="selectedOpen = false">
+                      close
                     </v-btn>
                   </v-card-actions>
                 </v-card>
@@ -94,15 +123,18 @@
 
 <script>
 import sidebar from "@/components/Sidebar"
-
+import firebase from "@/firebase"
+import "firebase/firestore"
+const db = firebase.firestore()
 export default {
   components: {
     sidebar
   },
   data: () => ({
-    today: "2019-01-01",
-    focus: "2019-01-01",
+    today: new Date().toISOString().substr(0, 10),
+    focus: new Date().toISOString().substr(0, 10),
     type: "month",
+    dialog: null,
     typeToLabel: {
       month: "Month",
       week: "Week",
@@ -112,25 +144,13 @@ export default {
     start: null,
     end: null,
     selectedEvent: {},
+    addEventData: {},
     selectedElement: null,
     selectedOpen: false,
-    events: [
-      {
-        name: "Vacation",
-        details: "Going to the beach!",
-        start: "2018-12-29",
-        end: "2019-01-01",
-        color: "blue"
-      }
-    ]
+    events: [],
+    currentlyEditing: null
   }),
   computed: {
-    dataMax() {
-      return Math.max(...this.value)
-    },
-    barHeight() {
-      return 200 / this.value.length - 10
-    },
     title() {
       const { start, end } = this
       if (!start || !end) {
@@ -169,7 +189,49 @@ export default {
   mounted() {
     this.$refs.calendar.checkChange()
   },
+  async created() {
+    await this.getEvents()
+  },
   methods: {
+    async getEvents() {
+      const snapshot = await db.collection("schedules").get()
+      let events = []
+      snapshot.forEach(doc => {
+        let appData = doc.data()
+        appData.id = doc.id
+        events.push(appData)
+      })
+      this.events = events
+    },
+    async updateEvent(ev) {
+      await db
+        .collection("schedules")
+        .doc(this.currentlyEditing)
+        .update({
+          details: ev.details
+        })
+      this.selectedOpen = false
+      this.currentlyEditing = null
+    },
+    async deleteEvent(id) {
+      await db
+        .collection("schedules")
+        .doc(id)
+        .delete()
+      this.selectedOpen = false
+      this.getEvents()
+    },
+    async addEvent(event) {
+      if (event.name && event.start && event.end) {
+        event.color = event.color.hex
+        await db.collection("schedules").add(event)
+        this.getEvents()
+        this.addEventData = {}
+      } else {
+        alert("You must add schedule name, start, and end time")
+      }
+      this.dialog = false
+    },
     viewDay({ date }) {
       this.focus = date
       this.type = "day"

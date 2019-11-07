@@ -26,6 +26,11 @@ const routes = [
     component: () => import("@/views/Dashboard.vue")
   },
   {
+    path: "/Geolocation",
+    name: "Geolocation",
+    component: () => import("@/views/Geolocation")
+  },
+  {
     path: "/Events",
     name: "Events",
     component: () => import("@/views/Events")
