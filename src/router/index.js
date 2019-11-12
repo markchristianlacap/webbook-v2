@@ -26,6 +26,11 @@ const routes = [
     component: () => import("@/views/Dashboard.vue")
   },
   {
+    path: "/Production",
+    name: "Production",
+    component: () => import("@/views/Production")
+  },
+  {
     path: "/Geolocation",
     name: "Geolocation",
     component: () => import("@/views/Geolocation")
@@ -38,7 +43,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes
 })
