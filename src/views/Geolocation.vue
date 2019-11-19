@@ -6,10 +6,15 @@
         <h1 class="title grey--text">Geolocation Mapper</h1>
         <modal />
         <v-row no-gutters>
-          <v-col class="pa-2" cols="3">
-            <v-expansion-panels>
+          <v-col class="pa-1" cols="3">
+            <v-expansion-panels light popout>
               <v-expansion-panel v-for="place in location" :key="place.id">
-                <v-expansion-panel-header>{{ place.name }}</v-expansion-panel-header>
+                <v-expansion-panel-header
+                  >{{ place.name }}
+                  <template v-slot:actions>
+                    <v-icon small color="primary">fa-chevron-arrow-down</v-icon>
+                  </template></v-expansion-panel-header
+                >
                 <v-expansion-panel-content class="caption">
                   <p><strong>Latitude: </strong> {{ place.coordinates[0] }}</p>
                   <p><strong>Longtitude: </strong> {{ place.coordinates[1] }}</p>

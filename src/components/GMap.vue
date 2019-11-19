@@ -2,8 +2,9 @@
   <div class="map">
     <div>
       <LMap v-if="location.length" id="map" ref="myMap" :zoom="10" :center="getCenter">
-        <LTileLayer :url="url" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'></LTileLayer>
+        <LTileLayer :url="url" :attribution="attribution"></LTileLayer>
         <LMarker v-for="place in location" :key="place.id" :lat-lng="getLatLng(place.coordinates)">
+          <LIcon :icon-size="iconSize" :icon-url="icon"></LIcon>
           <LTooltip>{{ place.name }}</LTooltip>
           <LPopup><v-btn small text color="primary">View Records</v-btn></LPopup>
         </LMarker>
@@ -13,15 +14,16 @@
 </template>
 
 <script>
-import { LMap, LTileLayer, LMarker, LTooltip, LPopup } from "vue2-leaflet"
-
+import { LMap, LTileLayer, LMarker, LTooltip, LPopup, LIcon } from "vue2-leaflet"
+import icon from "@/assets/img/farmer.svg"
 export default {
   components: {
     LMap,
     LTileLayer,
     LMarker,
     LTooltip,
-    LPopup
+    LPopup,
+    LIcon
   },
   props: {
     center: {
@@ -30,7 +32,10 @@ export default {
     }
   },
   data: () => ({
-    url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+    icon,
+    iconSize: [50, 50],
+    url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }),
   computed: {
     location() {

@@ -13,6 +13,9 @@
     <v-btn color="primary" text to="/Forum">
       <span class="pa-1">Forum</span>
     </v-btn>
+    <v-btn color="primary" text to="/Forum">
+      <span class="pa-1">Guide </span>
+    </v-btn>
     <v-menu v-if="user" open-on-hover bottom origin="top right" transition="scale-transition">
       <template v-slot:activator="{ on }">
         <v-btn color="primary" text v-on="on">

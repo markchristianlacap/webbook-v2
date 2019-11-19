@@ -12,12 +12,12 @@
             <v-text-field v-model="query" label="Search location in API"></v-text-field>
             <v-btn :loading="loading" class="mt-3 ml-2" color="primary" @click.prevent="search(query)">Find</v-btn>
           </v-row>
+          <v-divider></v-divider>
+          <div v-if="noRes">
+            <p class="subtitle">No results found.</p>
+          </div>
           <v-container v-if="results.length">
-            <v-divider></v-divider>
-            <div v-if="noRes">
-              <p>No results found in {{ query }}</p>
-            </div>
-            <v-list v-else>
+            <v-list>
               <v-list-item-group>
                 <v-list-item v-for="place in results" :key="place.properties.osm_id" two-line @click="add(place)">
                   <v-list-item-content>
@@ -61,13 +61,12 @@ export default {
       this.noRes = false
       const r = await fetch(`https://api.maptiler.com/geocoding/${query}.json?key=kJOMFOp5jsVf1rlQnFZR`).then(r => r.json())
       this.results = r.features
-      if (!this.results.length) this.noRes = true
+      if (!this.results.length) (this.noRes = true), console.log(this.noRes)
       this.loading = false
     },
     async add(place) {
       var ans = confirm(`Do you want to add ${place.place_name}?`)
       if (ans == true) {
-        console.log(place)
         const location = {
           AuthID: this.user.uid,
           name: place.place_name,
