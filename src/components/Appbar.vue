@@ -75,17 +75,10 @@
 </template>
 <script>
 export default {
-  data: () => ({
-    show: false
-  }),
   computed: {
     user() {
       return this.$store.state.user
     }
-  },
-  async created() {
-    await this.$store.dispatch("user")
-    this.show = true
   }
 }
 </script>

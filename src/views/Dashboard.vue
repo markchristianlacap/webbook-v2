@@ -8,71 +8,32 @@
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
       </v-sheet>
-      <v-card v-else class="pa-2">
+      <v-card v-else elevation="3" class="pl-3 pr-3">
         <v-row>
-          <v-col md="3" lg="3" sm="6" xs="12">
-            <v-card shaped>
-              <div class="d-flex flex-no-wrap justify-space-between">
-                <div>
-                  <v-card-subtitle class="headline">Farmers</v-card-subtitle>
-                  <v-card-title class="display-2 primary--text" v-text="getCount('farmers')"></v-card-title>
-                </div>
+          <v-col v-for="item in cards" :key="item.label" md="3" lg="3" sm="6" xs="12">
+            <v-tooltip bottom>
+              <template v-slot:activator="{ on }">
+                <v-card hover outlined elevation="3" shaped :to="item.route" v-on="on">
+                  <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                      <v-card-subtitle :class="`headline font-weight-bold ${item.color}--text`">{{ item.label }}</v-card-subtitle>
+                      <v-card-title :class="`display-2 ${item.color}--text`" v-text="getCount(item.table)"></v-card-title>
+                    </div>
 
-                <v-avatar class="ma-1" size="100" tile>
-                  <v-img src="@/assets/img/farmer.svg"></v-img>
-                </v-avatar>
-              </div>
-            </v-card>
-          </v-col>
-          <v-col md="4" lg="3" sm="6" xs="12">
-            <v-card shaped>
-              <div class="d-flex flex-no-wrap justify-space-between">
-                <div>
-                  <v-card-subtitle class="headline">Locations</v-card-subtitle>
-                  <v-card-title class="display-2 primary--text" v-text="getCount('location')"></v-card-title>
-                </div>
-
-                <v-avatar class="ma-1" size="100" tile>
-                  <v-img src="@/assets/img/location.svg"></v-img>
-                </v-avatar>
-              </div>
-            </v-card>
-          </v-col>
-          <v-col md="3" lg="3" sm="6" xs="12">
-            <v-card shaped>
-              <div class="d-flex flex-no-wrap justify-space-between">
-                <div>
-                  <v-card-subtitle class="headline">Variety</v-card-subtitle>
-                  <v-card-title class="display-2 primary--text" v-text="2"></v-card-title>
-                </div>
-
-                <v-avatar class="ma-1" size="100" tile>
-                  <v-img src="@/assets/img/palay.png"></v-img>
-                </v-avatar>
-              </div>
-            </v-card>
-          </v-col>
-          <v-col md="3" lg="3" sm="6" xs="12">
-            <v-card shaped>
-              <div class="d-flex flex-no-wrap justify-space-between">
-                <div>
-                  <v-card-subtitle class="headline">Tips</v-card-subtitle>
-                  <v-card-title class="display-2 primary--text" v-text="getCount('tips')"></v-card-title>
-                </div>
-
-                <v-avatar class="ma-1" size="100" tile>
-                  <v-img src="@/assets/img/tips.png"></v-img>
-                </v-avatar>
-              </div>
-            </v-card>
+                    <v-avatar class="ma-1" size="100" tile>
+                      <v-img :src="item.img"></v-img>
+                    </v-avatar>
+                  </div>
+                </v-card>
+              </template>
+              <span> <v-icon :color="item.color" small>fa-leaf</v-icon> View {{ item.label }}</span>
+            </v-tooltip>
           </v-col>
         </v-row>
         <v-row>
           <v-col lg="6" md="6" sm="12">
-            <v-card dark color="primary">
-              <div id="chart">
-                <apexchart type="bar" :options="chartOptions" :series="series" />
-              </div>
+            <v-card hover color="primary lighten-1" elevation="3" class="pa-1">
+              <apexchart type="bar" :options="chartOptions" :series="series" />
             </v-card>
           </v-col>
         </v-row>
@@ -88,6 +49,11 @@ export default {
   },
   data: () => ({
     loading: true,
+    cards: [
+      { label: "Farmers", table: "farmers", img: require("@/assets/img/farmer.svg"), color: "primary", route: "Production" },
+      { label: "Locations", table: "location", img: require("@/assets/img/location.svg"), color: "blue", route: "Geolocation" },
+      { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "orange", route: "Tips" }
+    ],
     series: [
       {
         data: []
@@ -111,7 +77,7 @@ export default {
           colors: ["#fff"]
         },
         formatter: function(val, opt) {
-          return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val
+          return opt.w.globals.labels[opt.dataPointIndex] + " :  " + val
         },
         offsetX: 0,
         dropShadow: {
@@ -143,12 +109,12 @@ export default {
       tooltip: {
         theme: "dark",
         x: {
-          show: false
+          show: true
         },
         y: {
           title: {
             formatter: function() {
-              return ""
+              return "Count: "
             }
           }
         }
@@ -188,18 +154,17 @@ export default {
       return this.$store.state[payload].length
     },
     getLocationCount() {
+      let count = 0
       this.locationNames.forEach(location => {
         let total = 0
-        let count = 0
         this.$store.state.farmers.forEach(f => {
           if (f.Location == location) {
             total++
           }
         })
-        count++
         this.series[0].data[count] = total
+        count++
       })
-      console.log(this.series)
     }
   }
 }

@@ -173,9 +173,9 @@ export default {
     },
     async save(editedItem) {
       this.loading = true
-      editedItem.Hectares = parseInt(editedItem.Hectares)
-      editedItem.Cost = parseInt(editedItem.Cost)
-      editedItem.Income = parseInt(editedItem.Income)
+      editedItem.Hectares = parseFloat(editedItem.Hectares)
+      editedItem.Cost = parseFloat(editedItem.Cost)
+      editedItem.Income = parseFloat(editedItem.Income)
       if (this.editedIndex > -1) {
         await db
           .collection("farmers")
