@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-btn small dark color="primary" class="ma-2" @click.stop="dialog = true">Add</v-btn>
+    <v-layout>
+      <v-spacer></v-spacer>
+      <v-btn small dark color="primary" class="ma-2" @click.stop="dialog = true">Add</v-btn>
+    </v-layout>
     <v-dialog v-model="dialog" dense width="400">
       <v-card dense small>
         <v-card-title class="headline grey lighten-2" primary-title>
@@ -61,7 +64,7 @@ export default {
       this.noRes = false
       const r = await fetch(`https://api.maptiler.com/geocoding/${query}.json?key=kJOMFOp5jsVf1rlQnFZR`).then(r => r.json())
       this.results = r.features
-      if (!this.results.length) (this.noRes = true), console.log(this.noRes)
+      if (!this.results.length) this.noRes = true
       this.loading = false
     },
     async add(place) {

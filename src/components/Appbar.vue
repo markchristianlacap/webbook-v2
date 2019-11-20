@@ -13,7 +13,7 @@
     <v-btn color="primary" text to="/Forum">
       <span class="pa-1">Forum</span>
     </v-btn>
-    <v-btn color="primary" text to="/Forum">
+    <v-btn color="primary" text to="/Guide">
       <span class="pa-1">Guide </span>
     </v-btn>
     <v-menu v-if="user" open-on-hover bottom origin="top right" transition="scale-transition">
@@ -44,6 +44,14 @@
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title class="primary--text font-weight-light">Dashboard</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/Password">
+            <v-list-item-icon>
+              <v-icon color="primary" small>fa-lock</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="primary--text font-weight-light">Change Password</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item @click="$store.dispatch('logout')">

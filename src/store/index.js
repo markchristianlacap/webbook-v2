@@ -11,17 +11,22 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: null,
-    location: []
+    location: [],
+    farmers: [],
+    tips: []
   },
   actions: {
-    async getLocation({ state }) {
-      await db.collection("location").onSnapshot(snapchat => {
-        state.location = []
-        snapchat.docs.forEach(doc => {
-          state.location.push({
-            ...doc.data(),
-            id: doc.id
+    async get({ state }, payload) {
+      return new Promise(res => {
+        db.collection(payload).onSnapshot(snapchat => {
+          state[payload] = []
+          snapchat.docs.forEach(doc => {
+            state[payload].push({
+              ...doc.data(),
+              id: doc.id
+            })
           })
+          res(snapchat)
         })
       })
     },

@@ -1,15 +1,15 @@
 <template>
   <div class="map">
-    <div>
+    <v-card>
       <LMap v-if="location.length" id="map" ref="myMap" :zoom="10" :center="getCenter">
         <LTileLayer :url="url" :attribution="attribution"></LTileLayer>
         <LMarker v-for="place in location" :key="place.id" :lat-lng="getLatLng(place.coordinates)">
           <LIcon :icon-size="iconSize" :icon-url="icon"></LIcon>
           <LTooltip>{{ place.name }}</LTooltip>
-          <LPopup><v-btn small text color="primary">View Records</v-btn></LPopup>
+          <LPopup><v-btn small text color="primary" :to="`/Geolocation/${place.name}`">View Records</v-btn></LPopup>
         </LMarker>
       </LMap>
-    </div>
+    </v-card>
   </div>
 </template>
 

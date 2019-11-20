@@ -3,7 +3,7 @@
     <section>
       <v-parallax src="@/assets/img/cover.jpg" height="600">
         <v-layout column align-center justify-center class="white--text">
-          <img src="@/assets/img/chart.png" alt="Vuetify.js" height="300" />
+          <img src="@/assets/img/palay.png" alt="Vuetify.js" height="300" />
           <h1 class="white--text mb-2 heading display-1 text-center font-weight-bold mt-2">Web Based Analytical Farm Record for Agricrop Production</h1>
           <div class="subheading mb-4 text-center">Keep track of your farm</div>
         </v-layout>
@@ -26,14 +26,14 @@
               <v-flex xs7 sm6 md4>
                 <v-card>
                   <v-card-text class="text-center">
-                    <v-icon x-large class="primary--text">fa-network-wired</v-icon>
+                    <v-icon x-large class="primary--text">fa-map-marked-alt</v-icon>
                   </v-card-text>
                   <v-card-title primary-title class="layout justify-center">
-                    <div class="headline text-center">Neural Network</div>
+                    <div class="headline text-center">Geolocation</div>
                   </v-card-title>
                   <v-card-text>
-                    You can think of them as a clustering and classification layer on top of the data you store and manage. They help to group unlabeled data according to similarities among the
-                    example inputs, and they classify data when they have a labeled dataset.
+                    Precision agriculture mapping entails timely collection of geospatial information regarding farmers, and later applying and prescribing site-specific treatments to increase produce
+                    while protecting the environment at the same time.
                   </v-card-text>
                 </v-card>
               </v-flex>

@@ -33,12 +33,23 @@ const routes = [
   {
     path: "/Geolocation",
     name: "Geolocation",
-    component: () => import("@/views/Geolocation")
+    component: () => import("@/views/Geolocation/index")
+  },
+  {
+    path: "/Geolocation/:brgy",
+    name: "Geolocation Record",
+    props: true,
+    component: () => import("@/views/Geolocation/Record")
   },
   {
     path: "/Events",
     name: "Events",
     component: () => import("@/views/Events")
+  },
+  {
+    path: "/Password",
+    name: "Password",
+    component: () => import("@/views/ChangePassword")
   }
 ]
 

@@ -79,7 +79,7 @@
             </v-icon>
           </template>
           <template v-slot:no-data>
-            <v-btn color="primary" @click="initialize">Refresh</v-btn>
+            <v-btn color="primary" @click="$store.dispatch('get', 'farmers')">Refresh</v-btn>
           </template>
         </v-data-table>
       </v-card>
@@ -111,7 +111,6 @@ export default {
       { text: "Season", value: "Season" },
       { text: "Actions", value: "action", align: "center", sortable: false }
     ],
-    farmers: [],
     editedIndex: -1,
     editedItem: {},
     defaultItem: {}
@@ -119,6 +118,9 @@ export default {
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? "New Farmer Record" : "Edit Farmer Record"
+    },
+    farmers() {
+      return this.$store.state.farmers
     },
     user() {
       return this.$store.state.user
@@ -137,23 +139,11 @@ export default {
     }
   },
   created() {
-    this.initialize()
+    this.$store.dispatch("get", "farmers")
+    this.$store.dispatch("get", "location")
   },
   methods: {
-    async initialize() {
-      await this.$store.dispatch("getLocation")
-      await db.collection("farmers").onSnapshot(snapchat => {
-        this.farmers = []
-        snapchat.docs.forEach(doc => {
-          this.farmers.push({
-            ...doc.data(),
-            id: doc.id
-          })
-        })
-      })
-    },
     editItem(item) {
-      console.log(item)
       this.editedIndex = this.farmers.indexOf(item)
       this.editedItem = Object.assign({}, item)
       this.dialog = true
