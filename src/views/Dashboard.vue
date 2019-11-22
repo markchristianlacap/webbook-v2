@@ -17,7 +17,7 @@
                   <div class="d-flex flex-no-wrap justify-space-between">
                     <div>
                       <v-card-subtitle :class="`headline font-weight-bold ${item.color}--text`">{{ item.label }}</v-card-subtitle>
-                      <v-card-title :class="`display-2 ${item.color}--text`" v-text="getCount(item.table)"></v-card-title>
+                      <v-card-title :class="`display-2 ${item.color}--text`" v-text="item.value ? getHectares + item.value : getCount(item.table)"></v-card-title>
                     </div>
 
                     <v-avatar class="ma-1" size="100" tile>
@@ -51,8 +51,9 @@ export default {
     loading: true,
     cards: [
       { label: "Farmers", table: "farmers", img: require("@/assets/img/farmer.svg"), color: "primary", route: "Production" },
-      { label: "Locations", table: "location", img: require("@/assets/img/location.svg"), color: "blue", route: "Geolocation" },
-      { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "orange", route: "Tips" }
+      { label: "Locations", table: "location", img: require("@/assets/img/location.svg"), color: "cyan", route: "Geolocation" },
+      { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "orange", route: "Tips" },
+      { label: "Hectares(ha)", value: "", img: require("@/assets/img/soil.svg"), color: "green", route: "Tips" }
     ],
     series: [
       {
@@ -139,6 +140,16 @@ export default {
     },
     getTotal() {
       return this.getIncome - this.getCost
+    },
+    getHectares() {
+      let total = 0
+      this.$store.state.farmers.forEach(f => (total += f.Hectares))
+
+      total = parseInt(total)
+        .toString()
+        .split(".")
+      total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      return total.join(".")
     }
   },
   async created() {

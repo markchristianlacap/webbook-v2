@@ -25,7 +25,7 @@ export default {
       { title: "Production", icon: "fa-leaf", route: "/Production" },
       { title: "Analytic", icon: "fa-chart-pie", route: "/Analytic" },
       { title: "Geolocation", icon: "fa-map-marked-alt", route: "/Geolocation" },
-      { title: "Schedules", icon: "fa-calendar-alt", route: "/Events" }
+      { title: "Scheduler", icon: "fa-calendar-alt", route: "/Events" }
     ]
   })
 }

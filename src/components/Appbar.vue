@@ -11,7 +11,7 @@
       <span class="pa-1">Home</span>
     </v-btn>
     <v-btn color="primary" text to="/Forum">
-      <span class="pa-1">Forum</span>
+      <span class="pa-1">Tips</span>
     </v-btn>
     <v-btn color="primary" text to="/Guide">
       <span class="pa-1">Guide </span>

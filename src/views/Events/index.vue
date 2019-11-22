@@ -5,6 +5,7 @@
     </v-flex>
     <v-flex>
       <v-card dense class="pa-2">
+        <p class="headline grey--text font-weight-bold text-center">Crop Scheduler</p>
         <v-row class="fill-height">
           <v-col>
             <v-sheet height="64">
@@ -191,6 +192,7 @@ export default {
   },
   async created() {
     await this.getEvents()
+    console.log(this.events)
   },
   methods: {
     async getEvents() {
@@ -224,8 +226,9 @@ export default {
     async addEvent(event) {
       if (event.name && event.start && event.end) {
         event.color = event.color.hex
-        await db.collection("schedules").add(event)
-        this.getEvents()
+        console.log(this.$store.dispatch("getRiceCalendar", event))
+        // await db.collection("schedules").add(event)
+        // this.getEvents()
         this.addEventData = {}
       } else {
         alert("You must add schedule name, start, and end time")
