@@ -23,7 +23,9 @@ Vue.filter("currency", function(value) {
 
   return "Php " + intPart + DecimalSeparator + decPart
 })
-
+Vue.filter("truncate", function(text, length, suffix = "....") {
+  return text.substring(0, length) + suffix
+})
 // this part resolve an issue where the markers would not appear
 delete Icon.Default.prototype._getIconUrl
 

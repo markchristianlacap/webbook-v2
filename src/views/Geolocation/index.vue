@@ -12,7 +12,7 @@
         <v-row no-gutters>
           <v-col class="pa-1" cols="3">
             <v-expansion-panels light popout>
-              <v-expansion-panel v-for="place in location" :key="place.id">
+              <v-expansion-panel v-for="(place, i) in location" :key="place.id">
                 <v-expansion-panel-header
                   >{{ place.name }}
                   <template v-slot:actions>
@@ -24,7 +24,7 @@
                   <p><strong>Longtitude: </strong> {{ place.coordinates[1] }}</p>
                   <v-btn-toggle>
                     <v-btn title="delete" text small @click.prevent="del(place.id)"><v-icon small color="red">fa-trash</v-icon></v-btn>
-                    <v-btn title="view" text small @click.prevent="center = place.coordinates"><v-icon small color="warning">fa-eye</v-icon></v-btn>
+                    <v-btn title="view" text small @click.prevent="view(i, place.coordinates)"><v-icon small color="warning">fa-eye</v-icon></v-btn>
                   </v-btn-toggle>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -32,7 +32,7 @@
           </v-col>
           <v-col>
             <v-card class="pa-3" elevation="2">
-              <GMap :center="center" />
+              <GMap ref="gmap" :center="center" />
             </v-card>
           </v-col>
         </v-row>
@@ -74,6 +74,10 @@ export default {
           .doc(id)
           .delete()
       }
+    },
+    view(i, coor) {
+      this.center = coor
+      this.$refs.gmap.view(i)
     }
   }
 }

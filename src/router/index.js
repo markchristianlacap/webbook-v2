@@ -42,6 +42,26 @@ const routes = [
     }
   },
   {
+    path: "/Guide/Corn",
+    name: "Corn",
+    component: () => import("@/views/Guide/Corn")
+  },
+  {
+    path: "/Guide/Rice",
+    name: "Rice",
+    component: () => import("@/views/Guide/Rice")
+  },
+  {
+    path: "/Tips",
+    name: "Tips",
+    component: () => import("@/views/Tips/index")
+  },
+  {
+    path: "/Tips/:id",
+    name: "View",
+    component: () => import("@/views/Tips/View")
+  },
+  {
     path: "/Geolocation",
     name: "Geolocation",
     component: () => import("@/views/Geolocation/index"),
@@ -84,7 +104,7 @@ const router = new VueRouter({
 //Guard authentication
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    const user = await store.dispatch("user")
+    const user = store.state.user || (await store.dispatch("user"))
     if (!user) {
       next({
         path: "/",

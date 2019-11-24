@@ -139,8 +139,8 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch("get", "farmers")
-    this.$store.dispatch("get", "location")
+    if (!this.farmers.length) this.$store.dispatch("get", "farmers")
+    if (!this.location.length) this.$store.dispatch("get", "location")
   },
   methods: {
     editItem(item) {

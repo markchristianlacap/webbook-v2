@@ -10,7 +10,7 @@
     <v-btn color="primary" text to="/">
       <span class="pa-1">Home</span>
     </v-btn>
-    <v-btn color="primary" text to="/Forum">
+    <v-btn color="primary" text to="/Tips">
       <span class="pa-1">Tips</span>
     </v-btn>
     <v-btn color="primary" text to="/Guide">

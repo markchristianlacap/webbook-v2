@@ -20,7 +20,7 @@
                       <v-card-title :class="`display-2 ${item.color}--text`" v-text="item.value ? getHectares + item.value : getCount(item.table)"></v-card-title>
                     </div>
 
-                    <v-avatar class="ma-1" size="100" tile>
+                    <v-avatar class="ma-1" max-width="200" tile>
                       <v-img :src="item.img"></v-img>
                     </v-avatar>
                   </div>
@@ -53,7 +53,7 @@ export default {
       { label: "Farmers", table: "farmers", img: require("@/assets/img/farmer.svg"), color: "primary", route: "Production" },
       { label: "Locations", table: "location", img: require("@/assets/img/location.svg"), color: "cyan", route: "Geolocation" },
       { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "orange", route: "Tips" },
-      { label: "Hectares(ha)", value: "", img: require("@/assets/img/soil.svg"), color: "green", route: "Tips" }
+      { label: "Hectares(ha)", value: " ", img: require("@/assets/img/soil.svg"), color: "green", route: "Tips" }
     ],
     series: [
       {
@@ -153,9 +153,9 @@ export default {
     }
   },
   async created() {
-    await this.$store.dispatch("get", "farmers")
-    await this.$store.dispatch("get", "location")
-    await this.$store.dispatch("get", "tips")
+    if (!this.$store.state.farmers.length) await this.$store.dispatch("get", "farmers")
+    if (!this.$store.state.location.length) await this.$store.dispatch("get", "location")
+    if (!this.$store.state.tips.length) await this.$store.dispatch("get", "tips")
     this.chartOptions.xaxis.categories = this.locationNames
     this.getLocationCount()
     this.loading = false

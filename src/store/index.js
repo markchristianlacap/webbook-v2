@@ -13,6 +13,7 @@ export default new Vuex.Store({
   state: {
     user: null,
     location: [],
+    schedules: [],
     farmers: [],
     tips: []
   },

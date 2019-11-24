@@ -4,7 +4,7 @@
       <LMap v-if="location.length" id="map" ref="myMap" :zoom="10" :center="getCenter">
         <LTileLayer :url="url" :attribution="attribution"></LTileLayer>
         <LMarker v-for="place in location" :key="place.id" :lat-lng="getLatLng(place.coordinates)">
-          <LIcon :icon-size="iconSize" :icon-url="icon"></LIcon>
+          <LIcon :icon-size="place.iconSize" :icon-url="icon"></LIcon>
           <LTooltip>{{ place.name }}</LTooltip>
           <LPopup><v-btn small text color="primary" :to="`/Geolocation/${place.name}`">View Records</v-btn></LPopup>
         </LMarker>
@@ -33,13 +33,17 @@ export default {
   },
   data: () => ({
     icon,
-    iconSize: [50, 50],
+    iconSize: [40, 40],
     url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }),
   computed: {
     location() {
-      return this.$store.state.location
+      let location = this.$store.state.location
+      location.forEach(loc => {
+        loc.iconSize = this.iconSize
+      })
+      return location
     },
     getCenter() {
       if (this.center.length) {
@@ -53,6 +57,12 @@ export default {
     getLatLng(coor) {
       const location = [coor[1], coor[0]]
       return location
+    },
+    view(i) {
+      this.location.forEach(loc => {
+        loc.iconSize = this.iconSize
+      })
+      this.location[i].iconSize = [80, 80]
     }
   }
 }

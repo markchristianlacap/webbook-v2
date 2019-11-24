@@ -77,7 +77,7 @@
                 ref="calendar"
                 v-model="focus"
                 color="primary"
-                :events="events"
+                :events="schedules"
                 :event-color="getEventColor"
                 :event-margin-bottom="3"
                 :now="today"
@@ -148,10 +148,12 @@ export default {
     addEventData: {},
     selectedElement: null,
     selectedOpen: false,
-    events: [],
     currentlyEditing: null
   }),
   computed: {
+    schedules() {
+      return this.$store.state.schedules
+    },
     title() {
       const { start, end } = this
       if (!start || !end) {
@@ -191,20 +193,9 @@ export default {
     this.$refs.calendar.checkChange()
   },
   async created() {
-    await this.getEvents()
-    console.log(this.events)
+    if (!this.schedules.lenght) await this.$store.dispatch("get", "schedules")
   },
   methods: {
-    async getEvents() {
-      const snapshot = await db.collection("schedules").get()
-      let events = []
-      snapshot.forEach(doc => {
-        let appData = doc.data()
-        appData.id = doc.id
-        events.push(appData)
-      })
-      this.events = events
-    },
     async updateEvent(ev) {
       await db
         .collection("schedules")
@@ -221,14 +212,11 @@ export default {
         .doc(id)
         .delete()
       this.selectedOpen = false
-      this.getEvents()
     },
     async addEvent(event) {
       if (event.name && event.start && event.end) {
         event.color = event.color.hex
-        console.log(this.$store.dispatch("getRiceCalendar", event))
-        // await db.collection("schedules").add(event)
-        // this.getEvents()
+        await db.collection("schedules").add(event)
         this.addEventData = {}
       } else {
         alert("You must add schedule name, start, and end time")

@@ -7,7 +7,7 @@ const firebaseConfig = {
   projectId: "webbook-b3670",
   storageBucket: "webbook-b3670.appspot.com",
   messagingSenderId: "873666792494",
-  appId: "1:873666792494:web:223c30567db9d543"
+  appId: "1:873666792494:web:fc1dba3fde0b20898863bf"
 }
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig)
