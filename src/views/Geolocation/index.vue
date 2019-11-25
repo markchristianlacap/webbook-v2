@@ -63,7 +63,7 @@ export default {
     }
   },
   async created() {
-    await this.$store.dispatch("get", "location")
+    if (!this.location.length) await this.$store.dispatch("get", "location")
   },
   methods: {
     async del(id) {

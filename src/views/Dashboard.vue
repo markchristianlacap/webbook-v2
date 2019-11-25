@@ -153,7 +153,7 @@ export default {
     }
   },
   async created() {
-    if (!this.$store.state.farmers.length) await this.$store.dispatch("get", "farmers")
+    // if (!this.$store.state.farmers.length) await this.$store.dispatch("get", "farmers")
     if (!this.$store.state.location.length) await this.$store.dispatch("get", "location")
     if (!this.$store.state.tips.length) await this.$store.dispatch("get", "tips")
     this.chartOptions.xaxis.categories = this.locationNames

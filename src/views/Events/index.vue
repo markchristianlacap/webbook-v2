@@ -193,7 +193,7 @@ export default {
     this.$refs.calendar.checkChange()
   },
   async created() {
-    if (!this.schedules.lenght) await this.$store.dispatch("get", "schedules")
+    if (!this.schedules.length) await this.$store.dispatch("get", "schedules")
   },
   methods: {
     async updateEvent(ev) {

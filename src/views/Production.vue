@@ -139,7 +139,7 @@ export default {
     }
   },
   created() {
-    if (!this.farmers.length) this.$store.dispatch("get", "farmers")
+    // if (!this.farmers.length) this.$store.dispatch("get", "farmers")
     if (!this.location.length) this.$store.dispatch("get", "location")
   },
   methods: {
