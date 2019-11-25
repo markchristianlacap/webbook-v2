@@ -7,11 +7,11 @@
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
       </v-sheet>
       <v-card v-else class="pa-2">
-        <h1 class="title grey--text text-center text-capitalize">Geolocation Mapper</h1>
+        <h1 class="headline font-weight-bold grey--text text-center">Geolocation Mapper</h1>
         <modal />
         <v-row no-gutters>
-          <v-col class="pa-1" cols="3">
-            <v-expansion-panels light popout>
+          <v-col class="pa-1" cols="3" height="100">
+            <v-expansion-panels light popout class=" scroll" style="max-height: 80vh">
               <v-expansion-panel v-for="(place, i) in location" :key="place.id">
                 <v-expansion-panel-header
                   >{{ place.name }}
@@ -82,3 +82,8 @@ export default {
   }
 }
 </script>
+<style>
+.scroll {
+  overflow-y: auto;
+}
+</style>

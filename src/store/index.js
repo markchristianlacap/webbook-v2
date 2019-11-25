@@ -4,32 +4,56 @@ import firebase from "@/firebase"
 import "firebase/auth"
 import "firebase/firestore"
 import router from "../router"
+// import farmers from "@/assets/JSON/farmers.json"
+import corn from "@/assets/JSON/corn.json"
 import moment from "moment"
 const auth = firebase.auth()
 const db = firebase.firestore()
 Vue.use(Vuex)
 
+function compare(key, order = "asc") {
+  return function innerSort(a, b) {
+    if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+      return 0
+    }
+
+    const varA = typeof a[key] === "string" ? a[key].toUpperCase() : a[key]
+    const varB = typeof b[key] === "string" ? b[key].toUpperCase() : b[key]
+
+    let comparison = 0
+    if (varA > varB) {
+      comparison = 1
+    } else if (varA < varB) {
+      comparison = -1
+    }
+    return order === "desc" ? comparison * -1 : comparison
+  }
+}
 export default new Vuex.Store({
   state: {
     user: null,
     location: [],
     schedules: [],
     farmers: [],
+    corn,
     tips: []
   },
   actions: {
     async get({ state }, payload) {
       return new Promise(res => {
-        db.collection(payload).onSnapshot(snapchat => {
-          state[payload] = []
-          snapchat.docs.forEach(doc => {
-            state[payload].push({
-              ...doc.data(),
-              id: doc.id
+        db.collection(payload)
+          .where("AuthID", "==", state.user.uid)
+          .onSnapshot(snapchat => {
+            state[payload] = []
+            snapchat.docs.forEach(doc => {
+              state[payload].push({
+                ...doc.data(),
+                id: doc.id
+              })
             })
+            state[payload].sort(compare("name"))
+            res(snapchat)
           })
-          res(snapchat)
-        })
       })
     },
     user({ state }) {

@@ -1,9 +1,10 @@
 <template>
   <v-app-bar app dark hide-on-scroll>
     <v-toolbar-title class="headline success--text">
-      <v-btn icon @click="$router.push('/')">
-        <v-icon color="primary">fa-tractor</v-icon>
-      </v-btn>
+      <v-avatar @click="$router.push('/')">
+        <v-img :src="require('@/assets/img/palay.png')"></v-img>
+        <!-- <v-icon color="primary">fa-tractor</v-icon> -->
+      </v-avatar>
       <span flat class="title font-weight-black"> AGRIBOOK </span>
     </v-toolbar-title>
     <v-spacer></v-spacer>

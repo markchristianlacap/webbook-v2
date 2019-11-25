@@ -4,8 +4,8 @@
       <v-parallax src="@/assets/img/rice.jpg" height="220">
         <v-layout column align-center justify-center class="white--text">
           <img src="@/assets/img/palay.png" alt="Vuetify.js" height="100" />
-          <h1 class="white--text mb-2 heading display-1 text-center font-weight-bold mt-2">Production's Guide</h1>
-          <div class="subheading mb-4 text-center">
+          <h1 class="shadow font-weight-bold">Production's Guide</h1>
+          <div class="shadow subheading text-center">
             Use this planting guide to get started with your planting. If you've never planted before, now is the time! Planting is like every other skill set: you just have to learn the basics. So,
             use this planting guide for the essential elements for getting started and growing successfully.
           </div>

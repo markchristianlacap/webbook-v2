@@ -6,9 +6,7 @@
         <div>
           <h1 class="title grey--text">Records of {{ brgy }}</h1>
           <p class="caption"><strong>Total Hectares</strong>: {{ totalHectares }}</p>
-          <p class="caption"><strong>Total Cost</strong>: {{ totalCost | currency }}</p>
-          <p class="caption"><strong>Total Income</strong>: {{ totalIncome | currency }}</p>
-          <p class="caption"><strong>Overall Income</strong>: {{ getTotal | currency }}</p>
+          <p class="caption"><strong>Total Harvested</strong>: {{ getTotal }}</p>
           <v-simple-table>
             <template v-slot:default>
               <thead>
@@ -31,9 +29,6 @@
 
 <script>
 import sidebar from "@/components/Sidebar"
-import firebase from "@/firebase"
-import "firebase/firestore"
-const db = firebase.firestore()
 export default {
   components: { sidebar },
   props: {
@@ -43,10 +38,12 @@ export default {
     }
   },
   data: () => ({
-    farmers: [],
-    headers: ["Name", "Crop", "Gender", "Hectares", "Season", "Variety", "Cost", "Income"]
+    headers: ["Name", "Crop", "Hectares", "Season", "Variety", "Total"]
   }),
   computed: {
+    farmers() {
+      return this.$store.state.farmers.filter(farmer => farmer.Location == this.brgy)
+    },
     totalHectares() {
       let total = 0
       this.farmers.forEach(farm => {
@@ -54,43 +51,14 @@ export default {
       })
       return total
     },
-    totalCost() {
-      let total = 0
-      this.farmers.forEach(farm => {
-        total += farm.Cost
-      })
-      return total
-    },
-    totalIncome() {
-      let total = 0
-      this.farmers.forEach(farm => {
-        total += farm.Income
-      })
-      return total
-    },
     getTotal() {
-      return this.totalIncome - this.totalCost
+      return this.farmers.reduce((a, b) => a + b)
     }
   },
-  created() {
-    this.initialize()
+  async created() {
+    if (!this.$store.state.farmers.length) await this.$store.dispatch("get", "farmers")
   },
-  methods: {
-    async initialize() {
-      await db
-        .collection("farmers")
-        .where("Location", "==", this.brgy)
-        .onSnapshot(snapchat => {
-          this.farmers = []
-          snapchat.docs.forEach(doc => {
-            this.farmers.push({
-              ...doc.data(),
-              id: doc.id
-            })
-          })
-        })
-    }
-  }
+  methods: {}
 }
 </script>
 

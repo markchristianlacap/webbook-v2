@@ -1,8 +1,7 @@
 <template>
   <div>
-    <v-layout>
-      <v-spacer></v-spacer>
-      <v-btn small dark color="primary" class="ma-2" @click.stop="dialog = true">Add</v-btn>
+    <v-layout justify-center>
+      <v-btn small text color="primary" class="ma-2" @click.stop="dialog = true">Add new location</v-btn>
     </v-layout>
     <v-dialog v-model="dialog" dense width="400">
       <v-card dense small>

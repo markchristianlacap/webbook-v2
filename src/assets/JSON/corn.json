@@ -1,0 +1,762 @@
+[
+  {
+    "Brgy": "BATONG BUHAY",
+    "Hectares": 832.7,
+    "Ave": 6.6,
+    "Total": "5,495.70",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BATONG BUHAY",
+    "Hectares": 832.7,
+    "Ave": 6.6,
+    "Total": "5,495.74",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BATONG BUHAY",
+    "Hectares": 832.7,
+    "Ave": 6.6,
+    "Total": "5,495.77",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BATONG BUHAY",
+    "Hectares": 832.7,
+    "Ave": 6.6,
+    "Total": "5,495.80",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BATONG BUHAY",
+    "Hectares": 832.7,
+    "Ave": 6.6,
+    "Total": "5,495.82",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BURGOS",
+    "Hectares": 69.6,
+    "Ave": 6.76,
+    "Total": 470.41,
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BURGOS",
+    "Hectares": 69.6,
+    "Ave": 6.76,
+    "Total": 470.44,
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BURGOS",
+    "Hectares": 69.6,
+    "Ave": 6.76,
+    "Total": 470.44,
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BURGOS",
+    "Hectares": 69.6,
+    "Ave": 6.76,
+    "Total": 470.46,
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "BURGOS",
+    "Hectares": 69.6,
+    "Ave": 6.76,
+    "Total": 470.49,
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "IBUD",
+    "Hectares": 330.3,
+    "Ave": 6.4,
+    "Total": "2,113.87",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "IBUD",
+    "Hectares": 330.3,
+    "Ave": 6.4,
+    "Total": "2,113.88",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "IBUD",
+    "Hectares": 330.3,
+    "Ave": 6.4,
+    "Total": "2,113.91",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "IBUD",
+    "Hectares": 330.3,
+    "Ave": 6.4,
+    "Total": "2,113.91",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "IBUD",
+    "Hectares": 330.3,
+    "Ave": 6.4,
+    "Total": "2,113.92",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "ILVITA",
+    "Hectares": 485.4,
+    "Ave": 6.6,
+    "Total": "3,203.48",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "ILVITA",
+    "Hectares": 485.4,
+    "Ave": 6.6,
+    "Total": "3,203.51",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "ILVITA",
+    "Hectares": 485.4,
+    "Ave": 6.6,
+    "Total": "3,203.54",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "ILVITA",
+    "Hectares": 485.4,
+    "Ave": 6.6,
+    "Total": "3,203.60",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "ILVITA",
+    "Hectares": 485.4,
+    "Ave": 6.6,
+    "Total": "3,203.64",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LAGNAS",
+    "Hectares": 955.7,
+    "Ave": 6.43,
+    "Total": "6,145.00",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LAGNAS",
+    "Hectares": 955.7,
+    "Ave": 6.43,
+    "Total": "6,145.04",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LAGNAS",
+    "Hectares": 955.7,
+    "Ave": 6.43,
+    "Total": "6,145.06",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LAGNAS",
+    "Hectares": 955.7,
+    "Ave": 6.43,
+    "Total": "6,145.10",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LAGNAS",
+    "Hectares": 955.7,
+    "Ave": 6.43,
+    "Total": "6,145.15",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LIGAYA",
+    "Hectares": 65,
+    "Ave": 6,
+    "Total": 390,
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LIGAYA",
+    "Hectares": 65,
+    "Ave": 6,
+    "Total": 390,
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LIGAYA",
+    "Hectares": 65,
+    "Ave": 6,
+    "Total": 390,
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LIGAYA",
+    "Hectares": 65,
+    "Ave": 6,
+    "Total": 390,
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "LIGAYA",
+    "Hectares": 65,
+    "Ave": 6,
+    "Total": 390,
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "MALISBONG",
+    "Hectares": 506.7,
+    "Ave": 6.47,
+    "Total": "3,278.28",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "MALISBONG",
+    "Hectares": 506.7,
+    "Ave": 6.47,
+    "Total": "3,278.30",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "MALISBONG",
+    "Hectares": 506.7,
+    "Ave": 6.47,
+    "Total": "3,278.31",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "MALISBONG",
+    "Hectares": 506.7,
+    "Ave": 6.47,
+    "Total": "3,278.33",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "MALISBONG",
+    "Hectares": 506.7,
+    "Ave": 6.47,
+    "Total": "3,278.34",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAETAN",
+    "Hectares": 881.21,
+    "Ave": 6.71,
+    "Total": "5,912.80",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAETAN",
+    "Hectares": 881.21,
+    "Ave": 6.71,
+    "Total": "5,912.82",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAETAN",
+    "Hectares": 881.21,
+    "Ave": 6.71,
+    "Total": "5,912.83",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAETAN",
+    "Hectares": 881.21,
+    "Ave": 6.71,
+    "Total": "5,912.85",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAETAN",
+    "Hectares": 881.21,
+    "Ave": 6.71,
+    "Total": "5,912.91",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAG-ASA",
+    "Hectares": 487.1,
+    "Ave": 6.5,
+    "Total": "3,166.00",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAG-ASA",
+    "Hectares": 487.1,
+    "Ave": 6.5,
+    "Total": "3,166.05",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAG-ASA",
+    "Hectares": 487.1,
+    "Ave": 6.5,
+    "Total": "3,166.07",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAG-ASA",
+    "Hectares": 487.1,
+    "Ave": 6.5,
+    "Total": "3,166.10",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PAG-ASA",
+    "Hectares": 487.1,
+    "Ave": 6.5,
+    "Total": "3,166.15",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PANDAN",
+    "Hectares": 565.6,
+    "Ave": 6.45,
+    "Total": "3,648.02",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PANDAN",
+    "Hectares": 565.6,
+    "Ave": 6.45,
+    "Total": "3,648.05",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PANDAN",
+    "Hectares": 565.6,
+    "Ave": 6.45,
+    "Total": "3,648.08",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PANDAN",
+    "Hectares": 565.6,
+    "Ave": 6.45,
+    "Total": "3,648.10",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "PANDAN",
+    "Hectares": 565.6,
+    "Ave": 6.45,
+    "Total": "3,648.12",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN AGUSTIN",
+    "Hectares": 111.5,
+    "Ave": 6.53,
+    "Total": 728.05,
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN AGUSTIN",
+    "Hectares": 111.5,
+    "Ave": 6.53,
+    "Total": 728.07,
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN AGUSTIN",
+    "Hectares": 111.5,
+    "Ave": 6.53,
+    "Total": 728.08,
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN AGUSTIN",
+    "Hectares": 111.5,
+    "Ave": 6.53,
+    "Total": 728.09,
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN AGUSTIN",
+    "Hectares": 111.5,
+    "Ave": 6.53,
+    "Total": 728.09,
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN FRANCISCO",
+    "Hectares": 127.1,
+    "Ave": 6.57,
+    "Total": 835,
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN FRANCISCO",
+    "Hectares": 127.1,
+    "Ave": 6.57,
+    "Total": 835.03,
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN FRANCISCO",
+    "Hectares": 127.1,
+    "Ave": 6.57,
+    "Total": 835.05,
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN FRANCISCO",
+    "Hectares": 127.1,
+    "Ave": 6.57,
+    "Total": 835.05,
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN FRANCISCO",
+    "Hectares": 127.1,
+    "Ave": 6.57,
+    "Total": 835.05,
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN NICOLAS",
+    "Hectares": 384.1,
+    "Ave": 6.42,
+    "Total": "2,465.87",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN NICOLAS",
+    "Hectares": 384.1,
+    "Ave": 6.42,
+    "Total": "2,465.88",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN NICOLAS",
+    "Hectares": 384.1,
+    "Ave": 6.42,
+    "Total": "2,465.90",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN NICOLAS",
+    "Hectares": 384.1,
+    "Ave": 6.42,
+    "Total": "2,465.90",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN NICOLAS",
+    "Hectares": 384.1,
+    "Ave": 6.42,
+    "Total": "2,465.92",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN VICENTE",
+    "Hectares": 568.8,
+    "Ave": 6.7,
+    "Total": "3,810.88",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN VICENTE",
+    "Hectares": 568.8,
+    "Ave": 6.7,
+    "Total": "3,810.90",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN VICENTE",
+    "Hectares": 568.8,
+    "Ave": 6.7,
+    "Total": "3,810.93",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN VICENTE",
+    "Hectares": 568.8,
+    "Ave": 6.7,
+    "Total": "3,810.95",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "SAN VICENTE",
+    "Hectares": 568.8,
+    "Ave": 6.7,
+    "Total": "3,810.96",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STA LUCIA",
+    "Hectares": 683.6,
+    "Ave": 6.55,
+    "Total": "4,477.40",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STA LUCIA",
+    "Hectares": 683.6,
+    "Ave": 6.55,
+    "Total": "4,477.44",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STA LUCIA",
+    "Hectares": 683.6,
+    "Ave": 6.55,
+    "Total": "4,477.49",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STA LUCIA",
+    "Hectares": 683.6,
+    "Ave": 6.55,
+    "Total": "4,477.55",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STA LUCIA",
+    "Hectares": 683.6,
+    "Ave": 6.55,
+    "Total": "4,477.58",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STO. NINO",
+    "Hectares": 445.6,
+    "Ave": 6.68,
+    "Total": "2,976.40",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STO. NINO",
+    "Hectares": 445.6,
+    "Ave": 6.68,
+    "Total": "2,976.45",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STO. NINO",
+    "Hectares": 445.6,
+    "Ave": 6.68,
+    "Total": "2,976.49",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STO. NINO",
+    "Hectares": 445.6,
+    "Ave": 6.68,
+    "Total": "2,976.57",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "STO. NINO",
+    "Hectares": 445.6,
+    "Ave": 6.68,
+    "Total": "2,976.60",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TAGUMPAY",
+    "Hectares": 945.9,
+    "Ave": 6.46,
+    "Total": "6,110.39",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TAGUMPAY",
+    "Hectares": 945.9,
+    "Ave": 6.46,
+    "Total": "6,110.43",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TAGUMPAY",
+    "Hectares": 945.9,
+    "Ave": 6.46,
+    "Total": "6,110.46",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TAGUMPAY",
+    "Hectares": 945.9,
+    "Ave": 6.46,
+    "Total": "6,110.49",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TAGUMPAY",
+    "Hectares": 945.9,
+    "Ave": 6.46,
+    "Total": "6,110.51",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TUBAN",
+    "Hectares": 660.3,
+    "Ave": 6.65,
+    "Total": "4,390.70",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TUBAN",
+    "Hectares": 660.3,
+    "Ave": 6.65,
+    "Total": "4,390.75",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TUBAN",
+    "Hectares": 660.3,
+    "Ave": 6.65,
+    "Total": "4,390.82",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TUBAN",
+    "Hectares": 660.3,
+    "Ave": 6.65,
+    "Total": "4,390.89",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "TUBAN",
+    "Hectares": 660.3,
+    "Ave": 6.65,
+    "Total": "4,390.99",
+    "Year": 2018,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "VICTORIA",
+    "Hectares": 731,
+    "Ave": 6.5,
+    "Total": "4,751.38",
+    "Year": 2014,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "VICTORIA",
+    "Hectares": 731,
+    "Ave": 6.5,
+    "Total": "4,751.41",
+    "Year": 2015,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "VICTORIA",
+    "Hectares": 731,
+    "Ave": 6.5,
+    "Total": "4,751.47",
+    "Year": 2016,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "VICTORIA",
+    "Hectares": 731,
+    "Ave": 6.5,
+    "Total": "4,751.48",
+    "Year": 2017,
+    "Crop": "Corn"
+  },
+  {
+    "Brgy": "VICTORIA",
+    "Hectares": 731,
+    "Ave": 6.5,
+    "Total": "4,751.50",
+    "Year": 2018,
+    "Crop": "Corn"
+  }
+]

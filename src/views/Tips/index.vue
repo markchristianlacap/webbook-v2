@@ -4,7 +4,7 @@
       <v-parallax src="@/assets/img/rice.jpg" height="220">
         <v-layout column align-center justify-center class="white--text">
           <img src="@/assets/img/palay.png" alt="Vuetify.js" height="100" />
-          <h1 class="white--text mb-2 heading display-1 text-center font-weight-bold mt-2">TIPS FOR PRODUCING QUALITY CROPS</h1>
+          <h1 class="shadow mb-2 font-weight-bold shadow">TIPS FOR PRODUCING QUALITY CROPS</h1>
           <!-- <div class="subheading mb-4 text-center">Keep track of your farm</div> -->
         </v-layout>
       </v-parallax>
@@ -25,16 +25,13 @@
         <v-flex v-for="(tip, i) in tips" :key="i" xs12 sm12 md12 class="my-1">
           <v-layout row wrap>
             <v-flex xs4 sm4 md2>
-              <v-img class="mx-auto my-auto" height="150" :src="tip.src"></v-img>
+              <v-img class="mx-auto my-auto" height="100" :src="tip.src"></v-img>
             </v-flex>
             <v-flex xs8 sm8 md10>
               <v-card-title primary-title>
                 <div>
                   <div class="title primary--text font-weight-black">
                     <router-link :to="`/Tips/${tip.id}`">{{ tip.Title }}</router-link>
-                  </div>
-                  <div class="body-2">
-                    {{ tip.Content | truncate(450) }}
                   </div>
                   <div class="grey--text caption"><span class="font-weight-bold">Written by:</span> {{ tip.Author }}</div>
                   <div class="grey--text caption"><span class="font-weight-bold">Date added:</span> {{ tip.Date }}</div>
@@ -113,6 +110,7 @@ export default {
     if (!this.tips.length) await this.$store.dispatch("get", "tips")
     if (!this.user) await this.$store.dispatch("user")
     this.loading = false
+    console.log(this.tips)
   },
   methods: {
     async save(tip) {

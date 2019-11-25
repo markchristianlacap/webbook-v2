@@ -196,6 +196,16 @@ export default {
     if (!this.schedules.length) await this.$store.dispatch("get", "schedules")
   },
   methods: {
+    // async migrate() {
+    //   try {
+    //     await this.$store.state.farmers.forEach(async data => {
+    //       await db.collection("farmers").add(data)
+    //       console.log("a")
+    //     })
+    //   } catch (e) {
+    //     console.log(e)
+    //   }
+    // },
     async updateEvent(ev) {
       await db
         .collection("schedules")

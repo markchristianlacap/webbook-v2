@@ -1,17 +1,17 @@
 <template>
   <div>
     <section>
-      <v-parallax src="@/assets/img/cover.jpg" height="600">
-        <v-layout column align-center justify-center class="white--text">
-          <img src="@/assets/img/palay.png" alt="Vuetify.js" height="300" />
-          <h1 class="white--text mb-2 heading display-1 text-center font-weight-bold mt-2">Web Based Analytical Farm Record for Agricrop Production</h1>
-          <div class="subheading mb-4 text-center">Keep track of your farm</div>
+      <v-parallax src="@/assets/img/cover.jpg" height="300">
+        <v-layout column align-center justify-center>
+          <img src="@/assets/img/corn.svg" alt="Vuetify.js" height="150" />
+          <h1 class="shadow display-1 font-weight-bold">Web Based Analytical Farm Record for Agricrop Production</h1>
+          <div class="shadow title mb-4 text-center">KEEP TRACK OF YOUR AGRICROP</div>
         </v-layout>
       </v-parallax>
     </section>
 
     <section>
-      <v-layout column wrap class="my-6" align-center>
+      <v-layout column wrap align-center>
         <v-flex xs12 sm4 class="my-4">
           <div class="text-center">
             <h2 class="headline">The best way to keep records</h2>
@@ -24,7 +24,7 @@
           <v-container grid-list-xl>
             <v-layout row wrap justify-center align-center>
               <v-flex xs7 sm6 md4>
-                <v-card>
+                <v-card elevation="3" outlined>
                   <v-card-text class="text-center">
                     <v-icon x-large class="primary--text">fa-map-marked-alt</v-icon>
                   </v-card-text>
@@ -38,7 +38,7 @@
                 </v-card>
               </v-flex>
               <v-flex xs7 sm6 md4>
-                <v-card>
+                <v-card elevation="3" outlined>
                   <v-card-text class="text-center">
                     <v-icon x-large class="primary--text">fa-chart-line</v-icon>
                   </v-card-text>
@@ -52,7 +52,7 @@
                 </v-card>
               </v-flex>
               <v-flex xs7 sm6 md4>
-                <v-card>
+                <v-card elevation="3" outlined>
                   <v-card-text class="text-center">
                     <v-icon x-large class="primary--text">fa-sync-alt</v-icon>
                   </v-card-text>
