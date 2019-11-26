@@ -4,6 +4,7 @@
       <v-parallax src="@/assets/img/rice.jpg" height="220">
         <v-layout column align-center justify-center class="white--text">
           <img src="@/assets/img/palay.png" alt="Vuetify.js" height="100" />
+
           <h1 class="shadow mb-2 font-weight-bold shadow">TIPS FOR PRODUCING QUALITY CROPS</h1>
           <!-- <div class="subheading mb-4 text-center">Keep track of your farm</div> -->
         </v-layout>
@@ -42,7 +43,6 @@
         </v-flex>
       </v-layout>
     </v-flex>
-
     <!-- New Tips Dialog -->
     <v-dialog v-model="dialog" width="500" persistent>
       <v-card>

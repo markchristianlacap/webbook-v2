@@ -112,6 +112,7 @@ export default {
       { text: "Year", value: "Year" },
       { text: "Variety", value: "Variety" },
       { text: "Fertilizer", value: "Fertilizer" },
+      { text: "Total", value: "Total" },
       { text: "Actions", value: "action", align: "center", sortable: false }
     ],
     defaultItem: {}

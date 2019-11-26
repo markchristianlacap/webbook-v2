@@ -4,7 +4,7 @@ import firebase from "@/firebase"
 import "firebase/auth"
 import "firebase/firestore"
 import router from "../router"
-import farmers from "@/assets/JSON/farmers.json"
+// import farmers from "@/assets/JSON/farmers.json"
 import corn from "@/assets/JSON/corn.json"
 import rice from "@/assets/JSON/rice.json"
 import moment from "moment"
@@ -34,8 +34,9 @@ export default new Vuex.Store({
   state: {
     user: null,
     location: [],
+    crops: ["Rice", "Corn"],
     schedules: [],
-    farmers: farmers,
+    farmers: [],
     corn,
     rice,
     tips: [],

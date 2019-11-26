@@ -219,9 +219,9 @@ export default {
   methods: {
     init() {
       function compare(a, b) {
-        const bandA = a.Year
-        const bandB = b.Year
-        return bandA > bandB ? -1 : 1
+        const yearA = a.Year
+        const yearB = b.Year
+        return yearA > yearB ? -1 : 1
       }
       this.$store.state.farmers.sort(compare)
       this.chartOptions.xaxis.categories = this.locationNames
