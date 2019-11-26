@@ -5,9 +5,15 @@
       <v-card class="pa-2">
         <div>
           <h1 class="title grey--text">Records of {{ brgy }}</h1>
-          <p class="caption"><strong>Total Hectares</strong>: {{ totalHectares }}</p>
-          <p class="caption"><strong>Total Harvested</strong>: {{ getTotal }}</p>
-          <v-simple-table>
+          <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }}</span
+          ><br />
+          <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }}</span
+          ><br />
+          <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }}</span
+          ><br />
+          <span class="body-2"><strong>Total Harvested</strong>: {{ getTotal | accounting }}</span
+          ><br />
+          <v-simple-table v-if="farmers.length">
             <template v-slot:default>
               <thead>
                 <tr>
@@ -15,8 +21,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="person in farmers" :key="person.Name">
-                  <td v-for="head in headers" :key="head">{{ head === "Cost" || head === "Income" ? $options.filters.currency(person[head]) : person[head] }}</td>
+                <tr v-for="(person, i) in farmers" :key="i">
+                  <td v-for="head in headers" :key="head">{{ person[head] }}</td>
                 </tr>
               </tbody>
             </template>
@@ -38,21 +44,33 @@ export default {
     }
   },
   data: () => ({
-    headers: ["Name", "Crop", "Hectares", "Season", "Variety", "Total"]
+    headers: ["Name", "Crop", "Hectares", "Season", "Variety", "Year", "Total"]
   }),
   computed: {
     farmers() {
       return this.$store.state.farmers.filter(farmer => farmer.Location == this.brgy)
     },
+    totalRice() {
+      return this.farmers.length
+        ? this.farmers
+            .filter(farmer => farmer.Crop == "Rice")
+            .map(farmer => farmer.Total)
+            .reduce((a, b) => a + b)
+        : 0
+    },
+    totalCorn() {
+      return this.farmers.length
+        ? this.farmers
+            .filter(farmer => farmer.Crop == "Corn")
+            .map(farmer => farmer.Total)
+            .reduce((a, b) => a + b)
+        : 0
+    },
     totalHectares() {
-      let total = 0
-      this.farmers.forEach(farm => {
-        total += farm.Hectares
-      })
-      return total
+      return this.farmers.length ? this.farmers.map(farmer => farmer.Hectares).reduce((a, b) => a + b) : 0
     },
     getTotal() {
-      return this.farmers.reduce((a, b) => a + b)
+      return parseFloat(this.totalRice) + parseFloat(this.totalCorn)
     }
   },
   async created() {

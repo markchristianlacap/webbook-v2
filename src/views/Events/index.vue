@@ -6,6 +6,7 @@
     <v-flex>
       <v-card dense class="pa-2">
         <p class="headline grey--text font-weight-bold text-center">Crop Scheduler</p>
+        <p class="grey--text text-center">The scheduler automatically give an schedules based on the date that had been entered.</p>
         <v-row class="fill-height">
           <v-col>
             <v-sheet height="64">
@@ -52,11 +53,13 @@
             <v-dialog v-model="dialog" dense max-width="500">
               <v-card>
                 <v-toolbar color="primary" dark flat dense>
-                  <v-toolbar-title>Add new schedule</v-toolbar-title>
+                  <v-toolbar-title>Add schedule of planting</v-toolbar-title>
                 </v-toolbar>
                 <v-container>
                   <v-form>
-                    <v-text-field v-model="addEventData.name" dense type="text" label="Schedule name (required)"></v-text-field>
+                    <v-flex>
+                      <v-select v-model="addEventData.name" :items="['Rice', 'Corn']" label="Crop"></v-select>
+                    </v-flex>
                     <v-text-field v-model="addEventData.details" dense type="text" label="Details"></v-text-field>
                     <v-text-field v-model="addEventData.start" dense type="date" label="Start (required)"></v-text-field>
                     <v-text-field v-model="addEventData.end" dense type="date" label="End (required)"></v-text-field>
@@ -91,23 +94,15 @@
                 <v-card dense color="grey lighten-4" min-width="350px" flat>
                   <v-toolbar :color="selectedEvent.color" dark dense>
                     <v-btn icon @click="deleteEvent(selectedEvent.id)">
-                      <v-icon color="red">mdi-delete</v-icon>
+                      <v-icon color="red darken-1">fa-trash</v-icon>
                     </v-btn>
                     <v-toolbar-title v-text="selectedEvent.name"></v-toolbar-title>
                   </v-toolbar>
                   <v-card-text>
-                    <v-form v-if="currentlyEditing !== selectedEvent.id">
-                      <span v-text="selectedEvent.details"></span>
-                    </v-form>
-                    <v-form v-else>
-                      <v-textarea v-model="selectedEvent.details" solo label="Add event"></v-textarea>
-                    </v-form>
+                    <span v-text="selectedEvent.details"></span>
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn text small outlined color="primary" @click="currentlyEditing ? updateEvent(selectedEvent) : (currentlyEditing = selectedEvent.id)">
-                      {{ currentlyEditing ? "Save" : "Edit" }}
-                    </v-btn>
                     <v-btn text small outlined color="deep-orange" @click="selectedOpen = false">
                       close
                     </v-btn>
@@ -147,12 +142,11 @@ export default {
     selectedEvent: {},
     addEventData: {},
     selectedElement: null,
-    selectedOpen: false,
-    currentlyEditing: null
+    selectedOpen: false
   }),
   computed: {
     schedules() {
-      return this.$store.state.schedules
+      return this.$store.getters.schedules
     },
     title() {
       const { start, end } = this
@@ -193,19 +187,9 @@ export default {
     this.$refs.calendar.checkChange()
   },
   async created() {
-    if (!this.schedules.length) await this.$store.dispatch("get", "schedules")
+    if (!this.$store.state.schedules.length) await this.$store.dispatch("get", "schedules")
   },
   methods: {
-    // async migrate() {
-    //   try {
-    //     await this.$store.state.farmers.forEach(async data => {
-    //       await db.collection("farmers").add(data)
-    //       console.log("a")
-    //     })
-    //   } catch (e) {
-    //     console.log(e)
-    //   }
-    // },
     async updateEvent(ev) {
       await db
         .collection("schedules")
@@ -226,6 +210,7 @@ export default {
     async addEvent(event) {
       if (event.name && event.start && event.end) {
         event.color = event.color.hex
+        event.AuthID = this.$store.state.user.uid
         await db.collection("schedules").add(event)
         this.addEventData = {}
       } else {
@@ -255,18 +240,15 @@ export default {
         this.selectedElement = nativeEvent.target
         setTimeout(() => (this.selectedOpen = true), 10)
       }
-
       if (this.selectedOpen) {
         this.selectedOpen = false
         setTimeout(open, 10)
       } else {
         open()
       }
-
       nativeEvent.stopPropagation()
     },
     updateRange({ start, end }) {
-      // You could load events from an outside source (like database) now that we have the start and end dates on the calendar
       this.start = start
       this.end = end
     },

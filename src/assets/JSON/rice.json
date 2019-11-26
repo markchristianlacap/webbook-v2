@@ -1,0 +1,2202 @@
+[
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 450,
+    "Ave": 13.8,
+    "Farmers": 335,
+    "Total": "2,847.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 0,
+    "Ave": 0,
+    "Farmers": 0,
+    "Total": 0,
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 488,
+    "Ave": 13.2,
+    "Farmers": 206,
+    "Total": "3,108.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,346",
+    "Ave": 13.9,
+    "Farmers": 582,
+    "Total": "9,459.10",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 688,
+    "Ave": 13.9,
+    "Farmers": 375,
+    "Total": "4,867.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 549,
+    "Ave": 13.28,
+    "Farmers": 228,
+    "Total": "3,771.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": "1,138",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,728.90",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 705,
+    "Ave": 13.2,
+    "Farmers": 349,
+    "Total": "4,734.80",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 269,
+    "Ave": 13.9,
+    "Farmers": 140,
+    "Total": "1,720.70",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 486,
+    "Ave": 12.6,
+    "Farmers": 248,
+    "Total": "2,963.60",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 478,
+    "Ave": 13.9,
+    "Farmers": 300,
+    "Total": "3,186.60",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 640,
+    "Ave": 14,
+    "Farmers": 274,
+    "Total": "4,660.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 79,
+    "Ave": 12.3,
+    "Farmers": 59,
+    "Total": 447,
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 394,
+    "Ave": 12.1,
+    "Farmers": 167,
+    "Total": "2,400",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": "2,086",
+    "Ave": 14.9,
+    "Farmers": 665,
+    "Total": "15,266.60",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 607,
+    "Ave": 12,
+    "Farmers": 170,
+    "Total": "3,588.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": "1,133",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,554.00",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 482,
+    "Ave": 12,
+    "Farmers": 250,
+    "Total": "2,678",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 378,
+    "Ave": 13,
+    "Farmers": 174,
+    "Total": "2,461.50",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 663,
+    "Ave": 14.3,
+    "Farmers": 130,
+    "Total": "4,778",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 280,
+    "Ave": 12.9,
+    "Farmers": 145,
+    "Total": "1,684",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 980,
+    "Ave": 14.4,
+    "Farmers": 293,
+    "Total": "7,500",
+    "Season": "Dry Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 410,
+    "Ave": 7.2,
+    "Farmers": 270,
+    "Total": "1,630",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 38.1,
+    "Ave": 6,
+    "Farmers": 40,
+    "Total": 131.1,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 240,
+    "Ave": 7.4,
+    "Farmers": 270,
+    "Total": 930,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,100",
+    "Ave": 5,
+    "Farmers": 385,
+    "Total": "5,445",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 120,
+    "Ave": 5,
+    "Farmers": 30,
+    "Total": 574,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 205,
+    "Ave": 5,
+    "Farmers": 185,
+    "Total": "1,000",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": 561,
+    "Ave": 5.2,
+    "Farmers": 92,
+    "Total": "2,920",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 298,
+    "Ave": 8.8,
+    "Farmers": 44,
+    "Total": "1,519",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 670,
+    "Ave": 7.7,
+    "Farmers": 220,
+    "Total": "2,777",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 280,
+    "Ave": 4,
+    "Farmers": 67,
+    "Total": "1,105",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 315,
+    "Ave": 4.2,
+    "Farmers": 120,
+    "Total": "1,305",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 270,
+    "Ave": 7.9,
+    "Farmers": 246,
+    "Total": "1,140",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 26,
+    "Ave": 7.2,
+    "Farmers": 20,
+    "Total": 958,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 138,
+    "Ave": 7.7,
+    "Farmers": 163,
+    "Total": 542,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": 720,
+    "Ave": 8.3,
+    "Farmers": 121,
+    "Total": "3,435.40",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 95,
+    "Ave": 4,
+    "Farmers": 124,
+    "Total": 370,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": 340,
+    "Ave": 7,
+    "Farmers": 190,
+    "Total": "1,374.00",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 945,
+    "Ave": 7,
+    "Farmers": 388,
+    "Total": "3,757",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 65,
+    "Ave": 7,
+    "Farmers": 74,
+    "Total": 240,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 215,
+    "Ave": 4.2,
+    "Farmers": 102,
+    "Total": 886,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 278,
+    "Ave": 4,
+    "Farmers": 116,
+    "Total": "1,100",
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 105,
+    "Ave": 5,
+    "Farmers": 117,
+    "Total": 515,
+    "Season": "Wet Season",
+    "Year": 2014,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 450,
+    "Ave": 13.8,
+    "Farmers": 335,
+    "Total": "2,847.10",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 0,
+    "Ave": 0,
+    "Farmers": 0,
+    "Total": 0,
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 488,
+    "Ave": 13.2,
+    "Farmers": 206,
+    "Total": "3,108.20",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,346",
+    "Ave": 13.9,
+    "Farmers": 582,
+    "Total": "9,459.10",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 688,
+    "Ave": 13.9,
+    "Farmers": 375,
+    "Total": "4,867.10",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 549,
+    "Ave": 13.28,
+    "Farmers": 228,
+    "Total": "3,771.20",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": "1,138",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,729.00",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 705,
+    "Ave": 13.2,
+    "Farmers": 349,
+    "Total": "4,735.00",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 269,
+    "Ave": 13.9,
+    "Farmers": 140,
+    "Total": "1,720.90",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 486,
+    "Ave": 12.6,
+    "Farmers": 248,
+    "Total": "2,963.90",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 478,
+    "Ave": 13.9,
+    "Farmers": 300,
+    "Total": "3,186.70",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 640,
+    "Ave": 14,
+    "Farmers": 274,
+    "Total": "4,660.20",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 79,
+    "Ave": 12.3,
+    "Farmers": 59,
+    "Total": 447.1,
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 394,
+    "Ave": 12.1,
+    "Farmers": 167,
+    "Total": "2,401",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": "2,086",
+    "Ave": 14.9,
+    "Farmers": 665,
+    "Total": "15,266.90",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 607,
+    "Ave": 12,
+    "Farmers": 170,
+    "Total": "3,588.20",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": "1,133",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,554.10",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 482,
+    "Ave": 12,
+    "Farmers": 250,
+    "Total": "2,679",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 378,
+    "Ave": 13,
+    "Farmers": 174,
+    "Total": "2,461.90",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 663,
+    "Ave": 14.3,
+    "Farmers": 130,
+    "Total": "4,780",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 280,
+    "Ave": 12.9,
+    "Farmers": 145,
+    "Total": "1,687",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 980,
+    "Ave": 14.4,
+    "Farmers": 293,
+    "Total": "7,502",
+    "Season": "Dry Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 410,
+    "Ave": 7.2,
+    "Farmers": 270,
+    "Total": "1,637",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 38.1,
+    "Ave": 6,
+    "Farmers": 40,
+    "Total": 131.6,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 240,
+    "Ave": 7.4,
+    "Farmers": 270,
+    "Total": 935,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,100",
+    "Ave": 5,
+    "Farmers": 385,
+    "Total": "5,449",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 120,
+    "Ave": 5,
+    "Farmers": 30,
+    "Total": 582,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 205,
+    "Ave": 5,
+    "Farmers": 185,
+    "Total": "1,010",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": 561,
+    "Ave": 5.2,
+    "Farmers": 92,
+    "Total": "2,927",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 298,
+    "Ave": 8.8,
+    "Farmers": 44,
+    "Total": "1,524",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 670,
+    "Ave": 7.7,
+    "Farmers": 220,
+    "Total": "2,783",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 280,
+    "Ave": 4,
+    "Farmers": 67,
+    "Total": "1,110",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 315,
+    "Ave": 4.2,
+    "Farmers": 120,
+    "Total": "1,310",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 270,
+    "Ave": 7.9,
+    "Farmers": 246,
+    "Total": "1,149",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 26,
+    "Ave": 7.2,
+    "Farmers": 20,
+    "Total": 962,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 138,
+    "Ave": 7.7,
+    "Farmers": 163,
+    "Total": 546,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": 720,
+    "Ave": 8.3,
+    "Farmers": 121,
+    "Total": "3,435.90",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 95,
+    "Ave": 4,
+    "Farmers": 124,
+    "Total": 372,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": 340,
+    "Ave": 7,
+    "Farmers": 190,
+    "Total": "1,374.20",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 945,
+    "Ave": 7,
+    "Farmers": 388,
+    "Total": "3,760",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 65,
+    "Ave": 7,
+    "Farmers": 74,
+    "Total": 242,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 215,
+    "Ave": 4.2,
+    "Farmers": 102,
+    "Total": 890,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 278,
+    "Ave": 4,
+    "Farmers": 116,
+    "Total": "1,102",
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 105,
+    "Ave": 5,
+    "Farmers": 117,
+    "Total": 517,
+    "Season": "Wet Season",
+    "Year": 2015,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 450,
+    "Ave": 13.8,
+    "Farmers": 335,
+    "Total": "2,847.50",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 0,
+    "Ave": 0,
+    "Farmers": 0,
+    "Total": 0,
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 488,
+    "Ave": 13.2,
+    "Farmers": 206,
+    "Total": "3,108.40",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,346",
+    "Ave": 13.9,
+    "Farmers": 582,
+    "Total": "9,459.30",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 688,
+    "Ave": 13.9,
+    "Farmers": 375,
+    "Total": "4,867.20",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 549,
+    "Ave": 13.28,
+    "Farmers": 228,
+    "Total": "3,771.50",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": "1,138",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,729.20",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 705,
+    "Ave": 13.2,
+    "Farmers": 349,
+    "Total": "4,735.20",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 269,
+    "Ave": 13.9,
+    "Farmers": 140,
+    "Total": "1,721.00",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 486,
+    "Ave": 12.6,
+    "Farmers": 248,
+    "Total": "2,964.00",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 478,
+    "Ave": 13.9,
+    "Farmers": 300,
+    "Total": "3,187.90",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 640,
+    "Ave": 14,
+    "Farmers": 274,
+    "Total": "4,660.40",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 79,
+    "Ave": 12.3,
+    "Farmers": 59,
+    "Total": 447.2,
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 394,
+    "Ave": 12.1,
+    "Farmers": 167,
+    "Total": "2,403",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": "2,086",
+    "Ave": 14.9,
+    "Farmers": 665,
+    "Total": "1,526,713",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 607,
+    "Ave": 12,
+    "Farmers": 170,
+    "Total": "3,588.40",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": "1,133",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,554.30",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 482,
+    "Ave": 12,
+    "Farmers": 250,
+    "Total": "2,680",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 378,
+    "Ave": 13,
+    "Farmers": 174,
+    "Total": "2,462.00",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 663,
+    "Ave": 14.3,
+    "Farmers": 130,
+    "Total": "4,782",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 280,
+    "Ave": 12.9,
+    "Farmers": 145,
+    "Total": "1,688",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 980,
+    "Ave": 14.4,
+    "Farmers": 293,
+    "Total": "7,504",
+    "Season": "Dry Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 410,
+    "Ave": 7.2,
+    "Farmers": 270,
+    "Total": "1,642",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 38.1,
+    "Ave": 6,
+    "Farmers": 40,
+    "Total": 132,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 240,
+    "Ave": 7.4,
+    "Farmers": 270,
+    "Total": 939,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,100",
+    "Ave": 5,
+    "Farmers": 385,
+    "Total": "5,453",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 120,
+    "Ave": 5,
+    "Farmers": 30,
+    "Total": 588,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 205,
+    "Ave": 5,
+    "Farmers": 185,
+    "Total": "1,013",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": 561,
+    "Ave": 5.2,
+    "Farmers": 92,
+    "Total": "2,930",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 298,
+    "Ave": 8.8,
+    "Farmers": 44,
+    "Total": "1,529",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 670,
+    "Ave": 7.7,
+    "Farmers": 220,
+    "Total": "2,790",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 280,
+    "Ave": 4,
+    "Farmers": 67,
+    "Total": "1,114",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 315,
+    "Ave": 4.2,
+    "Farmers": 120,
+    "Total": "1,315",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 270,
+    "Ave": 7.9,
+    "Farmers": 246,
+    "Total": "1,153",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 26,
+    "Ave": 7.2,
+    "Farmers": 20,
+    "Total": 966,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 138,
+    "Ave": 7.7,
+    "Farmers": 163,
+    "Total": 548,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": 720,
+    "Ave": 8.3,
+    "Farmers": 121,
+    "Total": "3,436.20",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 95,
+    "Ave": 4,
+    "Farmers": 124,
+    "Total": 374,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": 340,
+    "Ave": 7,
+    "Farmers": 190,
+    "Total": "1,374.40",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 945,
+    "Ave": 7,
+    "Farmers": 388,
+    "Total": "3,761",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 65,
+    "Ave": 7,
+    "Farmers": 74,
+    "Total": 246,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 215,
+    "Ave": 4.2,
+    "Farmers": 102,
+    "Total": 895,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 278,
+    "Ave": 4,
+    "Farmers": 116,
+    "Total": "1,107",
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 105,
+    "Ave": 5,
+    "Farmers": 117,
+    "Total": 520,
+    "Season": "Wet Season",
+    "Year": 2016,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 450,
+    "Ave": 13.8,
+    "Farmers": 335,
+    "Total": "2,847.40",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 0,
+    "Ave": 0,
+    "Farmers": 0,
+    "Total": 0,
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 488,
+    "Ave": 13.2,
+    "Farmers": 206,
+    "Total": "3,108.60",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,346",
+    "Ave": 13.9,
+    "Farmers": 582,
+    "Total": "9,459.50",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 688,
+    "Ave": 13.9,
+    "Farmers": 375,
+    "Total": "4,867.30",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 549,
+    "Ave": 13.28,
+    "Farmers": 228,
+    "Total": "3,771.70",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": "1,138",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,729.30",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 705,
+    "Ave": 13.2,
+    "Farmers": 349,
+    "Total": "4,735.40",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 269,
+    "Ave": 13.9,
+    "Farmers": 140,
+    "Total": "1,721.10",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 486,
+    "Ave": 12.6,
+    "Farmers": 248,
+    "Total": "2,964.10",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 478,
+    "Ave": 13.9,
+    "Farmers": 300,
+    "Total": "3,187.10",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 640,
+    "Ave": 14,
+    "Farmers": 274,
+    "Total": "4,660.60",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 79,
+    "Ave": 12.3,
+    "Farmers": 59,
+    "Total": 447.3,
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 394,
+    "Ave": 12.1,
+    "Farmers": 167,
+    "Total": "2,404",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": "2,086",
+    "Ave": 14.9,
+    "Farmers": 665,
+    "Total": "15,267.20",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 607,
+    "Ave": 12,
+    "Farmers": 170,
+    "Total": "3,588.70",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": "1,133",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,554.40",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 482,
+    "Ave": 12,
+    "Farmers": 250,
+    "Total": "2,682",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 378,
+    "Ave": 13,
+    "Farmers": 174,
+    "Total": "2,462.10",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 663,
+    "Ave": 14.3,
+    "Farmers": 130,
+    "Total": "4,784",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 280,
+    "Ave": 12.9,
+    "Farmers": 145,
+    "Total": "1,690",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 980,
+    "Ave": 14.4,
+    "Farmers": 293,
+    "Total": "7,506",
+    "Season": "Dry Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 410,
+    "Ave": 7.2,
+    "Farmers": 270,
+    "Total": "1,645",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 38.1,
+    "Ave": 6,
+    "Farmers": 40,
+    "Total": 132.2,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 240,
+    "Ave": 7.4,
+    "Farmers": 270,
+    "Total": 940,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Salgado",
+    "Hectares": "1,100",
+    "Ave": 5,
+    "Farmers": 385,
+    "Total": "5,458",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 120,
+    "Ave": 5,
+    "Farmers": 30,
+    "Total": 590,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 205,
+    "Ave": 5,
+    "Farmers": 185,
+    "Total": "1,017",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": 561,
+    "Ave": 5.2,
+    "Farmers": 92,
+    "Total": "2,933",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 298,
+    "Ave": 8.8,
+    "Farmers": 44,
+    "Total": "1,534",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 670,
+    "Ave": 7.7,
+    "Farmers": 220,
+    "Total": "2,795",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 280,
+    "Ave": 4,
+    "Farmers": 67,
+    "Total": "1,117",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 315,
+    "Ave": 4.2,
+    "Farmers": 120,
+    "Total": "1,318",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 270,
+    "Ave": 7.9,
+    "Farmers": 246,
+    "Total": "1,156",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 26,
+    "Ave": 7.2,
+    "Farmers": 20,
+    "Total": 969,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 138,
+    "Ave": 7.7,
+    "Farmers": 163,
+    "Total": 550,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": 720,
+    "Ave": 8.3,
+    "Farmers": 121,
+    "Total": "3,436.30",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 95,
+    "Ave": 4,
+    "Farmers": 124,
+    "Total": 377,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": 340,
+    "Ave": 7,
+    "Farmers": 190,
+    "Total": "1,374.50",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 945,
+    "Ave": 7,
+    "Farmers": 388,
+    "Total": "3,763",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 65,
+    "Ave": 7,
+    "Farmers": 74,
+    "Total": 248,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 215,
+    "Ave": 4.2,
+    "Farmers": 102,
+    "Total": 900,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 278,
+    "Ave": 4,
+    "Farmers": 116,
+    "Total": "1,110",
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 105,
+    "Ave": 5,
+    "Farmers": 117,
+    "Total": 522,
+    "Season": "Wet Season",
+    "Year": 2017,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 450,
+    "Ave": 13.8,
+    "Farmers": 335,
+    "Total": "2,847.50",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 0,
+    "Ave": 0,
+    "Farmers": 0,
+    "Total": 0,
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 488,
+    "Ave": 13.2,
+    "Farmers": 206,
+    "Total": "3,108.60",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "C. Salgado",
+    "Hectares": "1,346",
+    "Ave": 13.9,
+    "Farmers": 582,
+    "Total": "9,459.70",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 688,
+    "Ave": 13.9,
+    "Farmers": 375,
+    "Total": "4,867.40",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 549,
+    "Ave": 13.28,
+    "Farmers": 228,
+    "Total": "3,771.90",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": "1,138",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,729.40",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 705,
+    "Ave": 13.2,
+    "Farmers": 349,
+    "Total": "4,735.50",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 269,
+    "Ave": 13.9,
+    "Farmers": 140,
+    "Total": "1,721.30",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 486,
+    "Ave": 12.6,
+    "Farmers": 248,
+    "Total": "2,964.30",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 478,
+    "Ave": 13.9,
+    "Farmers": 300,
+    "Total": "3,187.20",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 640,
+    "Ave": 14,
+    "Farmers": 274,
+    "Total": "4,660.90",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 79,
+    "Ave": 12.3,
+    "Farmers": 59,
+    "Total": 447.5,
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 394,
+    "Ave": 12.1,
+    "Farmers": 167,
+    "Total": "2,408",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": "2,086",
+    "Ave": 14.9,
+    "Farmers": 665,
+    "Total": "15,267.30",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 607,
+    "Ave": 12,
+    "Farmers": 170,
+    "Total": "3,588.90",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": "1,133",
+    "Ave": 14.6,
+    "Farmers": 350,
+    "Total": "8,554.60",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 482,
+    "Ave": 12,
+    "Farmers": 250,
+    "Total": "2,684",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 378,
+    "Ave": 13,
+    "Farmers": 174,
+    "Total": "2,462.30",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 663,
+    "Ave": 14.3,
+    "Farmers": 130,
+    "Total": "4,786",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 280,
+    "Ave": 12.9,
+    "Farmers": 145,
+    "Total": "1,691",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 980,
+    "Ave": 14.4,
+    "Farmers": 293,
+    "Total": "7,508",
+    "Season": "Dry Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Batong Buhay",
+    "Hectares": 410,
+    "Ave": 7.2,
+    "Farmers": 270,
+    "Total": "1,650",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Buenavista",
+    "Hectares": 38.1,
+    "Ave": 6,
+    "Farmers": 40,
+    "Total": 132.4,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Burgos",
+    "Hectares": 240,
+    "Ave": 7.4,
+    "Farmers": 270,
+    "Total": 946,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "C. Salgado",
+    "Hectares": "1,100",
+    "Ave": 5,
+    "Farmers": 385,
+    "Total": "5,460",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Gen. E. Aguinaldo",
+    "Hectares": 120,
+    "Ave": 5,
+    "Farmers": 30,
+    "Total": 600,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ibud",
+    "Hectares": 205,
+    "Ave": 5,
+    "Farmers": 185,
+    "Total": "1,025",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ilvita",
+    "Hectares": 561,
+    "Ave": 5.2,
+    "Farmers": 92,
+    "Total": "2,937",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Lagnas",
+    "Hectares": 298,
+    "Ave": 8.8,
+    "Farmers": 44,
+    "Total": "1,537",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Ligaya",
+    "Hectares": 670,
+    "Ave": 7.7,
+    "Farmers": 220,
+    "Total": "2,800",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Malisbong",
+    "Hectares": 280,
+    "Ave": 4,
+    "Farmers": 67,
+    "Total": "1,120",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Paetan",
+    "Hectares": 315,
+    "Ave": 4.2,
+    "Farmers": 120,
+    "Total": "1,323",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Pag-asa",
+    "Hectares": 270,
+    "Ave": 7.9,
+    "Farmers": 246,
+    "Total": "1,160",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Poblacion",
+    "Hectares": 26,
+    "Ave": 7.2,
+    "Farmers": 20,
+    "Total": 972,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San agustin",
+    "Hectares": 138,
+    "Ave": 7.7,
+    "Farmers": 163,
+    "Total": 553,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San francisco",
+    "Hectares": 720,
+    "Ave": 8.3,
+    "Farmers": 121,
+    "Total": "3,436.50",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Nicolas",
+    "Hectares": 95,
+    "Ave": 4,
+    "Farmers": 124,
+    "Total": 380,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "San Vicente",
+    "Hectares": 340,
+    "Ave": 7,
+    "Farmers": 190,
+    "Total": "1,374.60",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sta. Lucia",
+    "Hectares": 945,
+    "Ave": 7,
+    "Farmers": 388,
+    "Total": "3,765",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Sto Nino",
+    "Hectares": 65,
+    "Ave": 7,
+    "Farmers": 74,
+    "Total": 250,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tagumpay",
+    "Hectares": 215,
+    "Ave": 4.2,
+    "Farmers": 102,
+    "Total": 903,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Tuban",
+    "Hectares": 278,
+    "Ave": 4,
+    "Farmers": 116,
+    "Total": "1,112",
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  },
+  {
+    "Brgy": "Victoria",
+    "Hectares": 105,
+    "Ave": 5,
+    "Farmers": 117,
+    "Total": 525,
+    "Season": "Wet Season",
+    "Year": 2018,
+    "Crop": "Rice"
+  }
+]

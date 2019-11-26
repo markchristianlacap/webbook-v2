@@ -40,7 +40,7 @@
             <apexchart type="bar" :options="chartOptions" :series="series" />
           </v-col>
           <v-col lg="6">
-            <apexchart type="bar" :options="chartOptions2" :series="series2" />
+            <apexchart type="line" height="350" :options="chartOptions2" :series="graph" />
           </v-col>
         </v-row>
       </v-card>
@@ -56,6 +56,7 @@ export default {
   },
   data: () => ({
     loading: true,
+    years: [2014, 2015, 2016, 2017, 2018, 2019],
     cards: [
       { label: "Farmers", value: 0, img: require("@/assets/img/farmer.svg"), color: "primary", route: "Production" },
       { label: "Places", table: "location", img: require("@/assets/img/location.svg"), color: "cyan", route: "Geolocation" },
@@ -126,75 +127,86 @@ export default {
           }
         }
       }
-    },
-    chartOptions2: {
-      title: {
-        text: "Previous Graph",
-        align: "center",
-        floating: true
-      },
-      subtitle: {
-        text: "Area(ha) per Barangay.",
-        align: "center"
-      },
-      chart: {
-        stacked: true,
-        toolbar: {
-          show: true
-        },
-        zoom: {
-          enabled: true
-        }
-      },
-
-      plotOptions: {
-        bar: {
-          horizontal: false
-        }
-      },
-
-      xaxis: {
-        type: "year",
-        categories: [2014, 2015, 2016, 2017, 2018]
-      },
-      legend: {
-        position: "right",
-        offsetY: 40
-      },
-      fill: {
-        opacity: 1
-      }
     }
   }),
   computed: {
-    series2() {
-      let series = []
-      const brgy = this.$store.state.corn.map(item => item.Brgy).filter((value, index, self) => self.indexOf(value) === index)
-      const years = [2014, 2015, 2016, 2017, 2018]
-      brgy.forEach(name => {
-        let record = { name }
-        let arrData = []
-        years.forEach(year => {
-          const corn = this.$store.state.corn.filter(d => {
-            return d.Year == year && d.Brgy == name
-          })
-          const res = corn.map(r => r.Hectares).reduce((a, b) => a + b)
-          arrData.push(res)
-          record.data = arrData
+    graph() {
+      const data = this.farmers
+      data.push(...this.$store.state.corn)
+      data.push(...this.$store.state.rice)
+      const crops = ["Rice", "Corn"]
+      let count = 0
+      let result = []
+      crops.forEach(crop => {
+        let record = { name: crop }
+        let arr = []
+        this.years.forEach(year => {
+          let res = data.filter(d => d.Crop == crop && d.Year == year).map(d => d.Total)
+          let num = res.length
+            ? Math.round(
+                res.reduce((a, b) => parseFloat(a) + parseFloat(b)),
+                2
+              )
+            : 0
+          arr.push(parseFloat(Math.round(num * 100) / 100).toFixed(2))
         })
-        series.push(record)
+        record.data = arr
+        result[count] = record
+        count++
       })
-      return series.sort()
+      return result
+    },
+    chartOptions2() {
+      return {
+        dataLabels: {
+          enabled: true
+        },
+        stroke: {
+          width: [5, 7, 5],
+          curve: "straight"
+        },
+        title: {
+          text: "Crop production Statistic",
+          align: "left"
+        },
+        markers: {
+          size: 0,
+
+          hover: {
+            sizeOffset: 6
+          }
+        },
+        xaxis: {
+          categories: this.years
+        },
+        tooltip: {
+          y: [
+            {
+              title: {
+                formatter: function(val) {
+                  return val + " total production"
+                }
+              }
+            },
+            {
+              title: {
+                formatter: function(val) {
+                  return val + " total production"
+                }
+              }
+            }
+          ]
+        },
+        grid: {
+          borderColor: "#f1f1f1"
+        }
+      }
     },
     locationNames() {
-      let names = []
-      this.$store.state.location.forEach(l => names.push(l.name))
-      return names
+      return this.$store.state.location.map(l => l.name)
     },
     farmers() {
-      return this.$store.state.farmers.filter((obj, pos, arr) => {
-        return arr.map(mapObj => mapObj["Name"]).indexOf(obj["Name"]) === pos || arr.map(mapObj => mapObj["Location"]).indexOf(obj["Location"]) === pos
-      })
+      return this.$store.state.farmers.filter((thing, index, self) => index === self.findIndex(t => t.Name === thing.Name && t.Location === thing.Location && t.Crop === thing.Crop))
     }
   },
   async created() {
@@ -221,15 +233,9 @@ export default {
         .split(".")
       total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       this.cards[3].value = total.join(".")
-
       let count = 0
       this.locationNames.forEach(location => {
-        let total = 0
-        this.farmers.forEach(f => {
-          if (f.Location == location) {
-            total++
-          }
-        })
+        let total = this.farmers.filter(farmer => farmer.Location == location).length
         this.series[0].data[count] = total
         count++
       })

@@ -8,11 +8,10 @@
     <template v-if="user">
       <v-btn v-if="user.uid === tip.authID" text class="green--text text--darken-2" @click="update">Edit</v-btn>
       <v-btn v-if="user.uid === tip.authID" text class="red--text text--darken-2" @click="deleteTip(tip.path)">Delete</v-btn>
-    <br />
+      <br />
     </template>
     <article>
-
-    <p class="text-justify body-1" style="text-indent:5%">{{ tip.Content }}</p>
+      <p class="text-justify body-1" style="text-indent:5%">{{ tip.Content }}</p>
     </article>
 
     <!-- Edit Tips Dialog -->
@@ -32,7 +31,7 @@
               </v-flex>
               <v-btn class="primary" dark @click="onPickFile">Upload Cover Image</v-btn>
               <div class="red--text">{{ imageRequired }}</div>
-              <input ref="fileInput"  style="display:none" data-vv-as="image" name="image_field" type="file" accept="image/*" @change="onFilePicked" />
+              <input ref="fileInput" style="display:none" data-vv-as="image" name="image_field" type="file" accept="image/*" @change="onFilePicked" />
               <v-flex>
                 <img height="200" :src="imageURL" alt="" />
               </v-flex>
@@ -42,11 +41,9 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn text class="mb-3" color="warning darken-1" @click="close">
-              
               <span>Cancel</span>
             </v-btn>
             <v-btn text :loading="loadingBtn" class="mb-3 mr-2" color="success darken-1" @click="save(tip)">
-             
               <span>Save</span>
             </v-btn>
           </v-card-actions>
@@ -86,7 +83,7 @@ export default {
       .onSnapshot(doc => {
         this.tip = doc.data()
       })
-    if(!this.user) await this.$store.dispatch("user")
+    if (!this.user) await this.$store.dispatch("user")
   },
   methods: {
     deleteTip(path) {

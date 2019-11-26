@@ -100,17 +100,16 @@ export default {
   }),
   computed: {
     tips() {
-      return this.$store.state.tips
+      return this.$store.state["public-tips"]
     },
     user() {
       return this.$store.state.user
     }
   },
   async created() {
-    if (!this.tips.length) await this.$store.dispatch("get", "tips")
+    if (!this.tips.length) await this.$store.dispatch("getPublic", "tips")
     if (!this.user) await this.$store.dispatch("user")
     this.loading = false
-    console.log(this.tips)
   },
   methods: {
     async save(tip) {

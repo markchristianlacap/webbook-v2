@@ -82,7 +82,6 @@
         </v-card>
       </v-card>
     </v-flex>
-    {{ locations }}
   </v-layout>
 </template>
 <script>
@@ -109,8 +108,9 @@ export default {
       { text: "Crop", value: "Crop" },
       { text: "Location", value: "Location" },
       { text: "Hectares", value: "Hectares" },
-      { text: "Variety", value: "Crop" },
       { text: "Season", value: "Season" },
+      { text: "Year", value: "Year" },
+      { text: "Variety", value: "Variety" },
       { text: "Fertilizer", value: "Fertilizer" },
       { text: "Actions", value: "action", align: "center", sortable: false }
     ],
@@ -142,7 +142,6 @@ export default {
   async created() {
     if (!this.farmers.length) this.$store.dispatch("get", "farmers")
     if (!this.location.length) this.$store.dispatch("get", "location")
-    this.locations = await db.collection("location").get()
   },
   methods: {
     editItem(item) {
@@ -175,6 +174,7 @@ export default {
     },
     async save(editedItem) {
       this.loading = true
+      editedItem.AuthID = this.user.uid
       editedItem.Hectares = parseFloat(editedItem.Hectares)
       editedItem.Total = parseFloat(editedItem.Total)
       if (this.editedIndex > -1) {

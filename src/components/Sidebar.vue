@@ -23,7 +23,7 @@ export default {
     items: [
       { title: "Dashboard", icon: "fa-tachometer-alt", route: "/Dashboard" },
       { title: "Production", icon: "fa-leaf", route: "/Production" },
-      { title: "Analytic", icon: "fa-chart-pie", route: "/Analytic" },
+      { title: "Analytics", icon: "fa-chart-pie", route: "/Analytics" },
       { title: "Geolocation", icon: "fa-map-marked-alt", route: "/Geolocation" },
       { title: "Scheduler", icon: "fa-calendar-alt", route: "/Events" }
     ]

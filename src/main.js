@@ -10,7 +10,7 @@ import VueApexCharts from "vue-apexcharts"
 Vue.component("apexchart", VueApexCharts)
 
 Vue.config.productionTip = false
-Vue.filter("currency", function(value) {
+Vue.filter("accounting", function(value) {
   var DecimalSeparator = Number("1.2")
     .toLocaleString()
     .substr(1, 1)
@@ -21,7 +21,7 @@ Vue.filter("currency", function(value) {
   var decPart = arParts.length > 1 ? arParts[1] : ""
   decPart = (decPart + "00").substr(0, 2)
 
-  return "Php " + intPart + DecimalSeparator + decPart
+  return intPart + DecimalSeparator + decPart
 })
 Vue.filter("truncate", function(text, length, suffix = "....") {
   return text.substring(0, length) + suffix
