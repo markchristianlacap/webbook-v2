@@ -1,18 +1,24 @@
-# agri
+# AGRIBOOK WEB BASED APPLICATION BUILT USING VUEJS AND VUETIFY AS UI TEMPLATE
+- [x] make sure you have node install
+- [x] you can make your own firebase config
+## Add these in document collection on your own firestore
++ farmers
++ location
++ tips
 
-## Project setup
+### Project setup
 ```
-yarn install
+yarn OR npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn serve or npm serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+yarn build or npm build
 ```
 
 ### Customize configuration
