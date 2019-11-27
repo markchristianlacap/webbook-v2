@@ -5,7 +5,26 @@
 + farmers
 + location
 + tips
-
+### TODOS
+- [x] Email verification
+- [x] Team personal information
+- [ ] Filter in production
+* Crops
+* Barangay
+- [ ] Filter per barangay in analytics
+- [ ] Dropdown in adding record
+- [ ] San Vicente Analytics
+- [ ] 
+* Variety
+* Type of soil
+- [ ] Crop scheduler
+- [ ] Give to gives
+- [ ] Details to please add details
+- [ ] Add printing of data or exporting to excel
+- [ ] Validate the tips content
+- [x] Add details and padding to footer
+- [ ] Set of intructions
+- [ ] Notification for schedules
 ### Project setup
 ```
 yarn OR npm install

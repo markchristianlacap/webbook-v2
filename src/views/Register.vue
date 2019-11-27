@@ -18,6 +18,9 @@
             <v-alert v-if="error" text dense outlined color="deep-orange" type="error">
               {{ error }}
             </v-alert>
+            <v-alert v-if="success" text dense outlined color="success" type="success">
+              {{ success }}
+            </v-alert>
             <v-form>
               <v-text-field v-model="user.email" dense label="Email" prepend-icon="fa-at" type="text"></v-text-field>
               <v-text-field v-model="user.displayName" dense label="Complete Name" prepend-icon="fa-signature" type="text"></v-text-field>
@@ -64,7 +67,8 @@ export default {
       show: { c: false, p: false },
       user: {},
       loading: false,
-      error: null
+      error: null,
+      success: null
     }
   },
   methods: {
@@ -77,7 +81,12 @@ export default {
         this.loading = true
         const res = await auth.createUserWithEmailAndPassword(user.email, user.password)
         res.user.updateProfile(user)
-        this.$router.push("dashboard")
+        try {
+          await auth.currentUser.sendEmailVerification()
+          this.success = `An email has been sent to ${user.email} for verification. Please check your inbox and click on verification link. Thank you`
+        } catch (e) {
+          console.log(e)
+        }
       } catch (e) {
         this.error = e.message.toLowerCase()
       }

@@ -105,13 +105,19 @@
         <v-flex xs12 class="mb-12">
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
-              <v-flex v-for="person in team" :key="person.name" xs12 md4>
-                <v-card class="pa-2 mx-2" height="100">
+              <v-flex v-for="(person, i) in team" :key="person.name" xs12 sm6 md4>
+                <v-card class="pa-2 mx-2">
                   <v-list-item>
-                    <v-list-item-avatar color="primary lighten-1"></v-list-item-avatar>
+                    <v-list-item-avatar size="90" color="primary">
+                      <v-img :src="require(`@/assets/img/team/${i + 1}.jpg`)"></v-img>
+                    </v-list-item-avatar>
                     <v-list-item-content>
-                      <v-list-item-title>{{ person.name }}</v-list-item-title>
-                      <v-list-item-subtitle>{{ person.role }}</v-list-item-subtitle>
+                      <v-list-item-title class="font-weight-bold">{{ person.name }}</v-list-item-title>
+                      <p class="caption">{{ person.role }}</p>
+                      <p class="caption">Email: {{ person.email }}</p>
+                      <p class="caption">Number: {{ person.number }}</p>
+                      <p class="caption">Birtdate: {{ person.birth }}</p>
+                      <p class="caption">Age: {{ person.age }}</p>
                     </v-list-item-content>
                   </v-list-item>
                 </v-card>
@@ -121,33 +127,38 @@
         </v-flex>
       </v-layout>
     </section>
-    <v-footer color="primary darken-2">
-      <v-layout row wrap align-center>
-        <v-flex xs12>
-          <div class="white--text ml-4">
+    <v-footer color="primary darken-2 pa-4">
+      <v-row >
+        <v-col md6>
+          <v-container class="white--text ml-2">
+            <strong class="title">AGRIBOOK</strong><br>
+            <strong>Contact us:</strong><br>
+            <span class="caption"><v-icon small class="fa-fw" color="white">fa-envelope</v-icon> &nbsp; cycymanzano1@gmail.com</span><br>
+            <span class="caption"><v-icon small class="fa-fw" color="white">fa-phone</v-icon> &nbsp;09355149849</span>
+          </v-container>
+        </v-col>
+        <v-col md6 align-center>
+          
+          <v-layout align-center  class="white--text">
+            <p class="text-center">
             Made with
             <v-icon class="red--text">mdi-heart</v-icon>
             using <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a> and <a class="white--text" target="__blank" href="https://vuejs.org/">VueJS</a>
-          </div>
-        </v-flex>
-      </v-layout>
+            </p>
+          </v-layout>
+        </v-col>
+      </v-row>
     </v-footer>
   </div>
 </template>
 
 <script>
+import team from "@/assets/JSON/team.json"
 export default {
   name: "Home",
   components: {},
   data: () => ({
-    team: [
-      { name: "CYREL GRACE L. MANZANO", role: "Web Developer", avatar: "@/assets//images/Team/avatar.png" },
-      { name: "PIMENTEL, KRISTINE D.", role: "Designer", avatar: "@/assets//images/Team/avatar.png" },
-      { name: "FRIAS, QUENNIE L.", role: "Researcher", avatar: "@/assets//images/Team/avatar.png" },
-      { name: "SIOSARLI, MENARD", role: "Documentator", avatar: "@/assets//images/Team/avatar.png" },
-      { name: "LOMBOY, JAMES KEEPER", role: "Web Developer", avatar: "@/assets//images/Team/avatar.png" },
-      { name: "ABARIENTOS, MA. ERICA L.", role: "Web Developer", avatar: "@/assets//images/Team/avatar.png" }
-    ]
+    team
   })
 }
 </script>

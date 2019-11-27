@@ -78,6 +78,11 @@ const routes = [
     }
   },
   {
+    path: "/verifyEmail",
+    name: "verifyEmail",
+    component: () => import("@/views/verifyEmail")
+  },
+  {
     path: "/Geolocation/:brgy",
     name: "Geolocation Record",
     props: true,
@@ -113,13 +118,20 @@ const router = new VueRouter({
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     const user = store.state.user || (await store.dispatch("user"))
-    if (!user) {
+    const verified = user ? await user.emailVerified : null
+    console.log(verified)
+    if (!verified && user) {
+      next({
+        path: "/verifyEmail",
+        query: { redirect: to.fullPath }
+      })
+    } else if (user && verified) {
+      next()
+    } else {
       next({
         path: "/",
         query: { redirect: to.fullPath }
       })
-    } else {
-      next()
     }
   } else {
     next()

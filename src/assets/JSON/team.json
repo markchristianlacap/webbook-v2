@@ -1,0 +1,62 @@
+[
+    {
+      "name": "Cyrel Grace L.",
+      "address": "Tuban, Sablayan, Occ. Mindoro",
+      "birth": "March 11, 1998",
+      "age": 21,
+      "sex": "Female",
+      "email": "cycymanzano1@gmail.com",
+      "number": 9355149849,
+      "role": "Web Developer/Researcher"
+    },
+    {
+      "name": "Menard G. Siosarli",
+      "address": "Tuban, Sablayan, Occ. Mindoro",
+      "birth": "October 15, 1996",
+      "age": 23,
+      "sex": "Male",
+      "email": "menardsiosarli@gmail.com",
+      "number": 9269948790,
+      "role": "Documentator"
+    },
+    {
+      "name": "James Keeper C. Lomboy",
+      "address": "Burgos, Sablayan, Occ. Mindoro",
+      "birth": "June 20, 1995",
+      "age": 24,
+      "sex": "Male",
+      "email": "lomboyjames.20@gmail.com",
+      "number": 9269948790,
+      "role": "Web Developer"
+    },
+    {
+      "name": "Quennie L. Frias",
+      "address": "Gozar Street Buenavista, Sablayan Occidental Mindoro",
+      "birth": "April 18, 1996",
+      "age": 23,
+      "sex": "Female",
+      "email": "friasquennie92@gmail.com",
+      "number": 9059363936,
+      "role": "Researcher"
+    },
+    {
+      "name": "Kristine D. Pimentel",
+      "address": "Tuban, Sablayan, Occidental Mindoro",
+      "birth": "March 25, 1998",
+      "age": 21,
+      "sex": "Female",
+      "email": "Kristinepimentek@gmail.com",
+      "number": 9974850200,
+      "role": "Designer"
+    },
+    {
+      "name": "Ma. Erica L. Abarientos",
+      "address": "Buenavista Sablayan, Occ. Mindoro",
+      "birth": "December 10, 1998",
+      "age": 21,
+      "sex": "Female",
+      "email": "ericaabarientos@yahoo.com",
+      "number": 9556149561,
+      "role": "Researcher"
+    }
+  ]
