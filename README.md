@@ -1,7 +1,7 @@
-# AGRIBOOK WEB BASED APPLICATION BUILT USING VUEJS AND VUETIFY AS UI TEMPLATE
+## AGRIBOOK WEB BASED APPLICATION BUILT USING VUEJS
 - [x] make sure you have node install
 - [x] create your own firebase config [here](http://firebase.google.com/)
-## Add these in document collection on your own firestore
+### Add these in document collection on your own firestore
 + farmers
 + location
 + tips
