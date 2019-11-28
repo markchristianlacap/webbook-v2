@@ -3,16 +3,69 @@
     <v-flex xs6 md2> <sidebar /> </v-flex>
     <v-flex>
       <v-card class="pa-2">
-        <v-toolbar flat class="pt-2">
+        <v-layout>
           <h1 class="heading font-weight-black grey--text">Production's Record</h1>
           <v-spacer></v-spacer>
-          <v-flex xs4 sm4 md 4>
-            <v-text-field v-model="search" dense label="Search"></v-text-field>
-          </v-flex>
-          <v-btn class="mr-3 ml-3" color="primary" small text @click="new_farmer">
-            <span class="text-none">New Record</span>
+          <v-btn text color="primary" @click="reset()">
+            <v-icon x-small>fa-close</v-icon>
+            <span class="text-none"><v-icon x-small>fa-times</v-icon> Clear filters</span>
           </v-btn>
-        </v-toolbar>
+          <v-btn color="primary" text @click="download(farmers)">
+            <span class="text-none"><v-icon x-small>fa-file-download</v-icon> Download current record</span>
+          </v-btn>
+          <v-btn color="primary" text @click="new_farmer">
+            <span class="text-none"><v-icon x-small>fa-plus</v-icon> New Record</span>
+          </v-btn>
+        </v-layout>
+        <v-row>
+          <v-col>
+            <v-select v-model="crop" :items="crops" label="Crops"></v-select>
+          </v-col>
+          <v-col>
+            <v-select v-model="season" :items="seasons" label="Seasons"></v-select>
+          </v-col>
+          <v-col>
+            <v-select v-model="location" :items="locations" label="Locations" multiple>
+              <template v-slot:selection="{ item, index }">
+                <span v-if="index === 0">{{ item | truncate(9) }}</span>
+                <span v-if="index === 1" class="grey--text caption">(+{{ location.length - 1 }})</span>
+              </template>
+            </v-select>
+          </v-col>
+          <v-col>
+            <v-select v-model="variety" :items="varieties" label="Variety" multiple>
+              <template v-slot:selection="{ item, index }">
+                <p class=" text-truncate">
+                  <span v-if="index === 0">{{ item | truncate(9) }}</span>
+                  <span v-if="index === 1" class="grey--text caption">(+{{ variety.length - 1 }})</span>
+                </p>
+              </template>
+            </v-select>
+          </v-col>
+          <v-col>
+            <v-select v-model="chemical" :items="chemicals" label="Chemicals" multiple>
+              <template v-slot:selection="{ item, index }">
+                <p class=" text-truncate">
+                  <span v-if="index === 0">{{ item | truncate(9) }}</span>
+                  <span v-if="index === 1" class="grey--text caption">(+{{ chemical.length - 1 }})</span>
+                </p>
+              </template>
+            </v-select>
+          </v-col>
+          <v-col>
+            <v-select v-model="fertilizer" :items="fertilizers" label="Fertilizers" multiple>
+              <template v-slot:selection="{ item, index }">
+                <p class=" text-truncate">
+                  <span v-if="index === 0">{{ item | truncate(9) }}</span>
+                  <span v-if="index === 1" class="grey--text caption">(+{{ fertilizer.length - 1 }})</span>
+                </p>
+              </template>
+            </v-select>
+          </v-col>
+          <v-col>
+            <v-text-field v-model="search" label="Search"></v-text-field>
+          </v-col>
+        </v-row>
         <v-dialog v-model="dialog" width="800">
           <v-card>
             <v-card-title>
@@ -25,7 +78,7 @@
                     <v-text-field v-model="editedItem.Name" label="Farmer's Name"></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm6 md6>
-                    <v-select v-model="editedItem.Location" :items="location" label="Location"></v-select>
+                    <v-select v-model="editedItem.Location" :items="locationOptions" label="Location"></v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
                     <v-text-field v-model="editedItem.Hectares" label="Hectares" suffix="ha"></v-text-field>
@@ -37,13 +90,23 @@
                     <v-select v-model="editedItem.Season" :items="seasons" label="Season"></v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
-                    <v-text-field v-model="editedItem.Variety" label="Variety"></v-text-field>
+                    <v-select v-model="editedItem.Variety" :items="varieties" label="Variety"></v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
-                    <v-text-field v-model="editedItem.Soil" label="Type of Soil"></v-text-field>
+                    <v-combobox v-model="editedItem.Chemicals" :items="chemicals" label="Chemicals" multiple>
+                      <template v-slot:selection="{ item, index }">
+                        <span v-if="index === 0">{{ item | truncate(16) }}</span>
+                        <span v-if="index === 1" class="grey--text caption">(+{{ editedItem.Chemicals.length - 1 }})</span>
+                      </template>
+                    </v-combobox>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
-                    <v-text-field v-model="editedItem.Fertilizer" label="Fertilizer Requested"></v-text-field>
+                    <v-combobox v-model="editedItem.Fertilizers" :items="fertilizers" label="Fertilizers" multiple>
+                      <template v-slot:selection="{ item, index }">
+                        <span v-if="index === 0">{{ item | truncate(16) }}</span>
+                        <span v-if="index === 1" class="grey--text caption">(+{{ editedItem.Fertilizers.length - 1 }})</span>
+                      </template>
+                    </v-combobox>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
                     <v-text-field v-model="editedItem.Year" label="Year"></v-text-field>
@@ -68,10 +131,10 @@
         <v-card flat dense class="pa-1">
           <v-data-table light multi-sort :headers="headers" :items="farmers" class="elevation-2" :search="search">
             <template v-slot:item.action="{ item }">
-              <v-icon small color="warning" class="mr-2" @click="editItem(item)">
+              <v-icon small color="primary" class="mr-2" @click="editItem(item)">
                 fa-edit
               </v-icon>
-              <v-icon small color="red" @click="deleteItem(item)">
+              <v-icon small color="primary" @click="deleteItem(item)">
                 fa-trash
               </v-icon>
             </template>
@@ -87,7 +150,7 @@
 <script>
 import sidebar from "@/components/Sidebar"
 import firebase from "@/firebase"
-
+import XLSX from "xlsx"
 import "firebase/firestore"
 const db = firebase.firestore()
 export default {
@@ -96,9 +159,13 @@ export default {
   },
   data: () => ({
     loading: false,
-    locations: [],
-    seasons: ["Main Crop", "Second Crop"],
-    crops: ["Rice", "Corn"],
+    seasons: ["All", "Main Crop", "Second Crop"],
+    crop: "All",
+    season: "All",
+    location: [],
+    variety: [],
+    chemical: [],
+    fertilizer: [],
     search: "",
     dialog: false,
     editedIndex: -1,
@@ -111,28 +178,67 @@ export default {
       { text: "Season", value: "Season" },
       { text: "Year", value: "Year" },
       { text: "Variety", value: "Variety" },
-      { text: "Fertilizer", value: "Fertilizer" },
-      { text: "Total", value: "Total" },
+      { text: "Chemicals", value: "Chemicals" },
+      { text: "Fertilizers", value: "Fertilizers" },
+      { text: "Total Harvested(bags)", value: "Total" },
       { text: "Actions", value: "action", align: "center", sortable: false }
     ],
     defaultItem: {}
   }),
   computed: {
     farmers() {
-      return this.$store.state.farmers
+      let farmers = this.$store.state.farmers
+      if (this.crop !== "All") farmers = farmers.filter(farmer => farmer.Crop == this.crop)
+      if (this.season !== "All") farmers = farmers.filter(farmer => farmer.Season == this.season)
+      if (this.variety.length) {
+        let newFamers = []
+        this.variety.forEach(variety => {
+          let filter = farmers.filter(farmer => farmer.Variety == variety)
+          newFamers.push(...filter)
+        })
+        farmers = newFamers
+      }
+      if (this.location.length) {
+        let newFamers = []
+        this.location.forEach(location => {
+          let filter = farmers.filter(farmer => farmer.Location == location)
+          newFamers.push(...filter)
+        })
+        farmers = newFamers
+      }
+      this.chemical.forEach(chemical => {
+        farmers = farmers.filter(farmer => farmer.Chemicals.includes(chemical))
+      })
+      this.fertilizer.forEach(fertilizer => {
+        farmers = farmers.filter(farmer => farmer.Fertilizers.includes(fertilizer))
+      })
+      return farmers
+    },
+    locationOptions() {
+      return this.$store.state.location.map(l => l.name)
+    },
+    crops() {
+      const crops = ["All"]
+      crops.push(...this.$store.state.crops)
+      return crops
+    },
+    varieties() {
+      return this.$store.getters.varieties
+    },
+    locations() {
+      return this.$store.getters.locations
+    },
+    chemicals() {
+      return this.$store.getters.chemicals
+    },
+    fertilizers() {
+      return this.$store.getters.fertilizers
     },
     formTitle() {
       return this.editedIndex === -1 ? "New Farmer Record" : "Edit Farmer Record"
     },
     user() {
       return this.$store.state.user
-    },
-    location() {
-      const location = []
-      this.$store.state.location.forEach(l => {
-        location.push(l.name)
-      })
-      return location
     }
   },
   watch: {
@@ -141,13 +247,36 @@ export default {
     }
   },
   async created() {
-    if (!this.farmers.length) this.$store.dispatch("get", "farmers")
-    if (!this.location.length) this.$store.dispatch("get", "location")
+    if (!this.farmers.length) await this.$store.dispatch("get", "farmers")
+    if (!this.location.length) await this.$store.dispatch("get", "location")
   },
   methods: {
+    reset() {
+      this.crop = "All"
+      this.season = "All"
+      this.location = []
+      this.variety = "All"
+      this.chemical = []
+      this.fertilizer = []
+      this.search = ""
+    },
+    download(data) {
+      data = data.filter(value => {
+        delete value.id
+        delete value.AuthID
+        return value
+      })
+      const wb = XLSX.utils.book_new()
+      let o = "farmers.xlsx"
+      const ws = XLSX.utils.json_to_sheet(data)
+      XLSX.utils.book_append_sheet(wb, ws, "Production")
+      XLSX.writeFile(wb, o)
+    },
     editItem(item) {
       this.editedIndex = this.farmers.indexOf(item)
       this.editedItem = Object.assign({}, item)
+      this.editedItem.Chemicals = this.editedItem.Chemicals.split(",")
+      this.editedItem.Fertilizers = this.editedItem.Fertilizers.split(",")
       this.dialog = true
     },
     async deleteItem(farmer) {
@@ -178,6 +307,8 @@ export default {
       editedItem.AuthID = this.user.uid
       editedItem.Hectares = parseFloat(editedItem.Hectares)
       editedItem.Total = parseFloat(editedItem.Total)
+      editedItem.Chemicals = editedItem.Chemicals.join()
+      editedItem.Fertilizers = editedItem.Fertilizers.join()
       if (this.editedIndex > -1) {
         await db
           .collection("farmers")

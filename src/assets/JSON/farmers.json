@@ -242,7 +242,7 @@
     "Year": 2019,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,25-0-0,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 95,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -267,7 +267,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "NK6410",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 97,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -332,7 +332,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "Ureaand,14-14-14,16+16+8",
+    "Fertilizers": "Urea,14-14-14,16+16+8",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 98,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -398,7 +398,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 100,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -411,7 +411,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16-20-0",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 100,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -424,7 +424,7 @@
     "Year": 2019,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,25-0-0,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 100,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -489,7 +489,7 @@
     "Year": 2018,
     "Variety": "NK6410",
     "Fertilizers": "Urea,14-14-14,16-20-0",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 103,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -528,7 +528,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,25-0-0",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 105,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -619,7 +619,7 @@
     "Year": 2018,
     "Variety": "DEKALB",
     "Fertilizers": "Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 150,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -865,7 +865,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 195,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -874,11 +874,11 @@
     "Name": "Cacabelos, Felix",
     "Location": "Paetan, Sablayan, Occidental Mindoro",
     "Crop": "Corn",
-    "Hectares": 2,
+    "Hectares": 2000,
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "NK6410",
-    "Fertilizers": "Ureaand,14-14-14,16+16+8",
+    "Fertilizers": "Urea,14-14-14,16+16+8",
     "Chemicals": "Magnum 5EC,15-15-30+M.E",
     "Total": 195,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -931,7 +931,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 207,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -944,7 +944,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 210,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1073,7 +1073,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "DEKALB",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Square-off,2 4-D",
     "Total": 298,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1100,7 +1100,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 307,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1164,8 +1164,8 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Fertilizers": "T-14,Urea,14-14-14",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 443,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1191,7 +1191,7 @@
     "Year": 2019,
     "Variety": "NK6410",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 496,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1217,7 +1217,7 @@
     "Year": 2019,
     "Variety": "NK6410",
     "Fertilizers": "Urea,25-0-0,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 587,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1255,7 +1255,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "NK6410",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 188,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1294,8 +1294,8 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Fertilizers": "T-14,Urea,14-14-14",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 95,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1347,7 +1347,7 @@
     "Year": 2019,
     "Variety": "DEKALB",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 147,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1398,7 +1398,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "NK6410",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Square-off,2 4-D",
     "Total": 210,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1424,7 +1424,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "NK6410",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Square-off,2 4-D",
     "Total": 234,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1775,7 +1775,7 @@
     "Season": "Second Crop",
     "Year": 2019,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Magnum 5EC,15-15-30+M.E",
     "Total": 283,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1814,7 +1814,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 300,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1841,7 +1841,7 @@
     "Year": 2018,
     "Variety": "NK6410",
     "Fertilizers": "16+16+8,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 300,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1854,7 +1854,7 @@
     "Year": 2018,
     "Variety": "NK6410",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 300,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1867,7 +1867,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 300,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1892,7 +1892,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Dekalb6919",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Square-off,2 4-D",
     "Total": 300,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1918,7 +1918,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 302,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -1958,7 +1958,7 @@
     "Year": 2018,
     "Variety": "NK6410",
     "Fertilizers": "16+16+8,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 302,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -1996,7 +1996,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -2009,7 +2009,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Grasszero,Glyzone,2 4-D",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -2049,7 +2049,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "16+16+8,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2061,8 +2061,8 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Fertilizers": "T-14,Urea,14-14-14",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2075,7 +2075,7 @@
     "Year": 2018,
     "Variety": "NK6410",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2088,7 +2088,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,14-14-14,16+16+8",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2101,7 +2101,7 @@
     "Year": 2018,
     "Variety": "Pioneer 4097",
     "Fertilizers": "Urea,25-0-0,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2126,7 +2126,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "Pioneer 4097",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Square-off,2 4-D",
     "Total": 303,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -2179,7 +2179,7 @@
     "Year": 2018,
     "Variety": "NK6410",
     "Fertilizers": "16+16+8,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 304,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2204,7 +2204,7 @@
     "Season": "Second Crop",
     "Year": 2018,
     "Variety": "NK6410",
-    "Fertilizers": "T14,Urea,14-14-14",
+    "Fertilizers": "T-14,Urea,14-14-14",
     "Chemicals": "Square-off,2 4-D",
     "Total": 304,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
@@ -2257,7 +2257,7 @@
     "Year": 2019,
     "Variety": "Pioneer 4097",
     "Fertilizers": "16+16+8,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 394,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },
@@ -2400,7 +2400,7 @@
     "Year": 2019,
     "Variety": "Pioneer 4097",
     "Fertilizers": "16+16+8,Urea,14-14-14",
-    "Chemicals": "Spitfire, 2 4-D, Grasszero",
+    "Chemicals": "Spitfire,2 4-D,Grasszero",
     "Total": 584,
     "AuthID": "SePZPxuazLSST7nPhdkI3Ji1MPx1"
   },

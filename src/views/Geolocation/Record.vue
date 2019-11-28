@@ -5,14 +5,10 @@
       <v-card class="pa-2">
         <div>
           <h1 class="title grey--text">Records of {{ brgy }}</h1>
-          <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }}</span
-          ><br />
-          <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }}</span
-          ><br />
-          <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }}</span
-          ><br />
-          <span class="body-2"><strong>Total Harvested</strong>: {{ getTotal | accounting }}</span
-          ><br />
+          <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }} ha</span><br />
+          <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }} bags</span><br />
+          <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }} bags</span><br />
+          <span class="body-2"><strong>Overall</strong>: {{ getTotal | accounting }} bags</span><br />
           <v-simple-table v-if="farmers.length">
             <template v-slot:default>
               <thead>
@@ -44,7 +40,7 @@ export default {
     }
   },
   data: () => ({
-    headers: ["Name", "Crop", "Hectares", "Season", "Variety", "Year", "Total"]
+    headers: ["Name", "Crop", "Hectares", "Season", "Variety", "Chemicals", "Fertilizers", "Year", "Total"]
   }),
   computed: {
     farmers() {

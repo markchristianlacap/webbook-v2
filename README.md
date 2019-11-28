@@ -8,23 +8,23 @@
 ### TODOS
 - [x] Email verification
 - [x] Team personal information
-- [ ] Filter in production
+- [x] Add details and padding to footer
+- [x] Filter in production
 * Crops
-* Barangay
-- [ ] Filter per barangay in analytics
-- [ ] Dropdown in adding record
-- [ ] San Vicente Analytics
-- [ ] 
+* Season
+* Locations
 * Variety
-* Type of soil
+* Chemical
+* Fertilizer
+- [x] Add printing of data or exporting to excel
+- [x] Dropdown in adding record
+- [ ] Filter per barangay in analytics
 - [ ] Crop scheduler
 - [ ] Give to gives
 - [ ] Details to please add details
-- [ ] Add printing of data or exporting to excel
 - [ ] Validate the tips content
-- [x] Add details and padding to footer
-- [ ] Set of intructions
 - [ ] Notification for schedules
+- [ ] Set of intructions
 ### Project setup
 ```
 yarn OR npm install

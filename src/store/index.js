@@ -43,6 +43,40 @@ export default new Vuex.Store({
     "public-tips": []
   },
   getters: {
+    locations(state) {
+      return state.farmers
+        .map(l => l.Location)
+        .filter((v, i, a) => a.indexOf(v) === i)
+        .sort()
+    },
+    varieties(state) {
+      return state.farmers
+        .map(l => l.Variety)
+        .filter((v, i, a) => a.indexOf(v) === i)
+        .sort()
+    },
+    chemicals(state) {
+      let result = []
+      state.farmers
+        .map(f => f.Chemicals)
+        .forEach(chemicals => {
+          chemicals.split(",").forEach(chemical => {
+            result.push(chemical)
+          })
+        })
+      return result.filter((v, i, a) => a.indexOf(v) === i)
+    },
+    fertilizers(state) {
+      let result = []
+      state.farmers
+        .map(f => f.Fertilizers)
+        .forEach(fertilizers => {
+          fertilizers.split(",").forEach(fertilizer => {
+            result.push(fertilizer)
+          })
+        })
+      return result.filter((v, i, a) => a.indexOf(v) === i)
+    },
     schedules(state) {
       if (!state.schedules.length) return []
       let data = []

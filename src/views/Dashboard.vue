@@ -59,9 +59,9 @@ export default {
     years: [2014, 2015, 2016, 2017, 2018, 2019],
     cards: [
       { label: "Farmers", value: 0, img: require("@/assets/img/farmer.svg"), color: "primary", route: "Production" },
-      { label: "Places", table: "location", img: require("@/assets/img/location.svg"), color: "cyan", route: "Geolocation" },
-      { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "orange", route: "Tips" },
-      { label: "Areas", value: 0, img: require("@/assets/img/soil.svg"), color: "green", route: "Tips" }
+      { label: "Places", table: "location", img: require("@/assets/img/location.svg"), color: "primary", route: "Geolocation" },
+      { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "primary", route: "Tips" },
+      { label: "Areas", value: 0, img: require("@/assets/img/soil.svg"), color: "primary", route: "Analytics" }
     ],
     series: [
       {
@@ -203,7 +203,7 @@ export default {
       }
     },
     locationNames() {
-      return this.$store.state.location.map(l => l.name)
+      return this.$store.getters.locations
     },
     farmers() {
       return this.$store.state.farmers.filter((thing, index, self) => index === self.findIndex(t => t.Name === thing.Name && t.Location === thing.Location && t.Crop === thing.Crop))

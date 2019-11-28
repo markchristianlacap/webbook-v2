@@ -128,22 +128,21 @@
       </v-layout>
     </section>
     <v-footer color="primary darken-2 pa-4">
-      <v-row >
+      <v-row>
         <v-col md6>
           <v-container class="white--text ml-2">
-            <strong class="title">AGRIBOOK</strong><br>
-            <strong>Contact us:</strong><br>
-            <span class="caption"><v-icon small class="fa-fw" color="white">fa-envelope</v-icon> &nbsp; cycymanzano1@gmail.com</span><br>
+            <strong class="title">AGRIBOOK</strong><br />
+            <strong>Contact us:</strong><br />
+            <span class="caption"><v-icon small class="fa-fw" color="white">fa-envelope</v-icon> &nbsp; cycymanzano1@gmail.com</span><br />
             <span class="caption"><v-icon small class="fa-fw" color="white">fa-phone</v-icon> &nbsp;09355149849</span>
           </v-container>
         </v-col>
         <v-col md6 align-center>
-          
-          <v-layout align-center  class="white--text">
+          <v-layout align-center class="white--text">
             <p class="text-center">
-            Made with
-            <v-icon class="red--text">mdi-heart</v-icon>
-            using <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a> and <a class="white--text" target="__blank" href="https://vuejs.org/">VueJS</a>
+              Made with
+              <v-icon class="red--text">mdi-heart</v-icon>
+              using <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a> and <a class="white--text" target="__blank" href="https://vuejs.org/">VueJS</a>
             </p>
           </v-layout>
         </v-col>
@@ -159,6 +158,9 @@ export default {
   components: {},
   data: () => ({
     team
-  })
+  }),
+  async created() {
+    await this.$store.dispatch("user")
+  }
 }
 </script>

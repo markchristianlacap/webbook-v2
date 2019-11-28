@@ -2,14 +2,18 @@
   <v-layout class="ma-1">
     <v-flex xs6 md2> <sidebar /> </v-flex>
     <v-flex>
-      <v-sheet v-if="!location.length" class="pa-5">
+      <v-sheet v-if="loading" class="pa-5">
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
       </v-sheet>
+
       <v-card v-else class="pa-2">
         <h1 class="headline font-weight-bold grey--text text-center">Geolocation Mapper</h1>
         <modal />
-        <v-row no-gutters>
+        <v-layout v-if="!location.length" justify-center>
+          <h3 class="grey--text">No locations found. Click <span class="primary--text title font-weight-light">ADD NEW LOCATION</span> to create.</h3>
+        </v-layout>
+        <v-row v-else no-gutters>
           <v-col class="pa-1" cols="3" height="100">
             <v-expansion-panels light popout class=" scroll" style="max-height: 80vh">
               <v-expansion-panel v-for="(place, i) in location" :key="place.id">
@@ -55,7 +59,8 @@ export default {
     modal
   },
   data: () => ({
-    center: []
+    center: [],
+    loading: true
   }),
   computed: {
     location() {
@@ -64,6 +69,7 @@ export default {
   },
   async created() {
     if (!this.location.length) await this.$store.dispatch("get", "location")
+    this.loading = false
   },
   methods: {
     async del(id) {

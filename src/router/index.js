@@ -119,7 +119,6 @@ router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     const user = store.state.user || (await store.dispatch("user"))
     const verified = user ? await user.emailVerified : null
-    console.log(verified)
     if (!verified && user) {
       next({
         path: "/verifyEmail",
