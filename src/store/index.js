@@ -35,6 +35,7 @@ export default new Vuex.Store({
     user: null,
     location: [],
     crops: ["Rice", "Corn"],
+    seasons: ["Main Crop", "Seacon Crop"],
     schedules: [],
     farmers: [],
     corn,

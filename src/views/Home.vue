@@ -137,15 +137,6 @@
             <span class="caption"><v-icon small class="fa-fw" color="white">fa-phone</v-icon> &nbsp;09355149849</span>
           </v-container>
         </v-col>
-        <v-col md6 align-center>
-          <v-layout align-center class="white--text">
-            <p class="text-center">
-              Made with
-              <v-icon class="red--text">mdi-heart</v-icon>
-              using <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a> and <a class="white--text" target="__blank" href="https://vuejs.org/">VueJS</a>
-            </p>
-          </v-layout>
-        </v-col>
       </v-row>
     </v-footer>
   </div>

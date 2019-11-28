@@ -4,13 +4,12 @@
       <v-parallax src="@/assets/img/rice.jpg" height="220">
         <v-layout column align-center justify-center class="white--text">
           <img src="@/assets/img/palay.png" alt="Vuetify.js" height="100" />
-
           <h1 class="shadow mb-2 font-weight-bold shadow">TIPS FOR PRODUCING QUALITY CROPS</h1>
           <div class="shadow subheading mb-4 text-center">Tips are submitted by different users of agribook</div>
         </v-layout>
       </v-parallax>
     </section>
-    <v-flex class="pl-3 pr-3">
+    <v-flex>
       <v-layout v-if="user">
         <v-spacer></v-spacer>
         <v-btn color="primary" text @click="dialog = true">
@@ -22,26 +21,29 @@
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
       </v-sheet>
-      <v-layout v-else row wrap class="pa-2 ma-2">
-        <v-flex v-for="(tip, i) in tips" :key="i" xs12 sm12 md12 class="my-1">
-          <v-layout row wrap>
-            <v-flex xs4 sm4 md2>
-              <v-img class="mx-auto my-auto" height="100" :src="tip.src"></v-img>
-            </v-flex>
-            <v-flex xs8 sm8 md10>
-              <v-card-title primary-title>
-                <div>
-                  <div class="title primary--text font-weight-black">
-                    <router-link :to="`/Tips/${tip.id}`">{{ tip.Title }}</router-link>
+      <v-container v-else>
+        <p class="subheading text-end">Found {{ tips.length }} tips</p>
+        <v-layout row wrap c>
+          <v-flex v-for="(tip, i) in tips" :key="i" xs12 sm12 md12 class="my-1">
+            <v-layout row wrap>
+              <v-flex xs4 sm4 md2>
+                <v-img class="mx-auto my-auto" height="100" :src="tip.src"></v-img>
+              </v-flex>
+              <v-flex xs8 sm8 md10>
+                <v-card-title primary-title>
+                  <div>
+                    <div class="title primary--text font-weight-black">
+                      <router-link :to="`/Tips/${tip.id}`">{{ tip.Title }}</router-link>
+                    </div>
+                    <div class="grey--text caption"><span class="font-weight-bold">Written by:</span> {{ tip.Author }}</div>
+                    <div class="grey--text caption"><span class="font-weight-bold">Date added:</span> {{ tip.Date }}</div>
                   </div>
-                  <div class="grey--text caption"><span class="font-weight-bold">Written by:</span> {{ tip.Author }}</div>
-                  <div class="grey--text caption"><span class="font-weight-bold">Date added:</span> {{ tip.Date }}</div>
-                </div>
-              </v-card-title>
-            </v-flex>
-          </v-layout>
-        </v-flex>
-      </v-layout>
+                </v-card-title>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-flex>
     <v-dialog v-model="dialog" width="500" persistent>
       <v-card>

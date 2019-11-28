@@ -87,10 +87,10 @@
                     <v-text-field v-model="editedItem.Hectares" label="Hectares" suffix="ha"></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
-                    <v-select v-model="editedItem.Crop" :items="crops" label="Crop"></v-select>
+                    <v-select v-model="editedItem.Crop" :items="$store.state.crops" label="Crop"></v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
-                    <v-select v-model="editedItem.Season" :items="seasons" label="Season"></v-select>
+                    <v-select v-model="editedItem.Season" :items="$store.state.seasons" label="Season"></v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
                     <v-select v-model="editedItem.Variety" :items="varieties" label="Variety"></v-select>
@@ -265,7 +265,7 @@ export default {
       this.crop = "All"
       this.season = "All"
       this.location = []
-      this.variety = "All"
+      this.variety = []
       this.chemical = []
       this.fertilizer = []
       this.search = ""
@@ -314,18 +314,26 @@ export default {
     },
     async save(editedItem) {
       this.loading = true
-      editedItem.AuthID = this.user.uid
-      editedItem.Hectares = parseFloat(editedItem.Hectares)
-      editedItem.Total = parseFloat(editedItem.Total)
-      editedItem.Chemicals = editedItem.Chemicals.join()
-      editedItem.Fertilizers = editedItem.Fertilizers.join()
+      const newItem = {
+        AuthID: this.user.uid,
+        Name: editedItem.Name,
+        Location: editedItem.Location,
+        Hectares: parseFloat(editedItem.Hectares),
+        Crop: editedItem.Crop,
+        Season: editedItem.Season,
+        Variety: editedItem.Variety,
+        Year: parseInt(editedItem.Year),
+        Chemicals: editedItem.Chemicals.join(),
+        Fertilizers: editedItem.Fertilizers.join(),
+        Total: parseFloat(editedItem.Total)
+      }
       if (this.editedIndex > -1) {
         await db
           .collection("farmers")
           .doc(editedItem.id)
-          .set(editedItem)
+          .set(newItem)
       } else {
-        await db.collection("farmers").add(editedItem)
+        await db.collection("farmers").add(newItem)
       }
       this.loading = false
       this.close()

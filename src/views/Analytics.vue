@@ -64,6 +64,7 @@
               <apexchart type="pie" :options="pieOptions" :series="pie" />
             </v-flex>
           </v-layout>
+          <span class="subheading primary--text ma-1">*Note: Locations that are not included in the list has no existing record in the database.</span>
           <v-row>
             <v-col md="6" lg="6">
               <apexchart type="bar" height="350" :options="chemicalsChartOptions" :series="chemicalsData" />
@@ -72,7 +73,6 @@
               <apexchart type="bar" height="350" :options="fertilizersChartOptions" :series="fertilizersData" />
             </v-col>
           </v-row>
-          <span class="subheading primary--text ma-1">*Note: Locations that are not included in the list has no existing record in the database.</span>
         </v-card>
       </v-card>
     </v-flex>
