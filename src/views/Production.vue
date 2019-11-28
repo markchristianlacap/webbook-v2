@@ -25,6 +25,9 @@
             <v-select v-model="season" :items="seasons" label="Seasons"></v-select>
           </v-col>
           <v-col>
+            <v-select v-model="year" :items="years" label="Year"></v-select>
+          </v-col>
+          <v-col>
             <v-select v-model="location" :items="locations" label="Locations" multiple>
               <template v-slot:selection="{ item, index }">
                 <span v-if="index === 0">{{ item | truncate(9) }}</span>
@@ -164,6 +167,7 @@ export default {
     season: "All",
     location: [],
     variety: [],
+    year: "All",
     chemical: [],
     fertilizer: [],
     search: "",
@@ -190,6 +194,7 @@ export default {
       let farmers = this.$store.state.farmers
       if (this.crop !== "All") farmers = farmers.filter(farmer => farmer.Crop == this.crop)
       if (this.season !== "All") farmers = farmers.filter(farmer => farmer.Season == this.season)
+      if (this.year !== "All") farmers = farmers.filter(farmer => farmer.Year == this.year)
       if (this.variety.length) {
         let newFamers = []
         this.variety.forEach(variety => {
@@ -216,6 +221,11 @@ export default {
     },
     locationOptions() {
       return this.$store.state.location.map(l => l.name)
+    },
+    years() {
+      const years = ["All"]
+      years.push(...this.$store.getters.years)
+      return years
     },
     crops() {
       const crops = ["All"]

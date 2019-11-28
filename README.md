@@ -5,7 +5,7 @@
 + farmers
 + location
 + tips
-### TODOS
+### TODOS(Recommendations)
 - [x] Email verification
 - [x] Team personal information
 - [x] Add details and padding to footer
@@ -18,12 +18,12 @@
 * Fertilizer
 - [x] Add printing of data or exporting to excel
 - [x] Dropdown in adding record
-- [ ] Filter per barangay in analytics
+- [x] Filter per barangay in analytics
+- [x] Details to please add details
+- [x] Give to gives
+- [x] Validate the tips content
 - [ ] Crop scheduler
-- [ ] Give to gives
-- [ ] Details to please add details
-- [ ] Validate the tips content
-- [ ] Notification for schedules
+- [x] Notification for schedules
 - [ ] Set of intructions
 ### Project setup
 ```

@@ -20,4 +20,7 @@ export default {
 .shadow {
   text-shadow: 2px 2px rgb(0, 0, 0);
 }
+.scroll {
+  overflow-y: auto;
+}
 </style>

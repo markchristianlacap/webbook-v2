@@ -6,7 +6,7 @@
     <v-flex>
       <v-card dense class="pa-2">
         <p class="headline grey--text font-weight-bold text-center">Crop Scheduler</p>
-        <p class="grey--text text-center">The scheduler automatically give an schedules based on the date that had been entered.</p>
+        <p class="grey--text text-center">The scheduler automatically gives an schedules based on the date that had been entered.</p>
         <v-row class="fill-height">
           <v-col>
             <v-sheet height="64">
@@ -58,9 +58,9 @@
                 <v-container>
                   <v-form>
                     <v-flex>
-                      <v-select v-model="addEventData.name" :items="['Rice', 'Corn']" label="Crop"></v-select>
+                      <v-select v-model="addEventData.name" :items="['Rice', 'Corn']" label="Choose crop"></v-select>
                     </v-flex>
-                    <v-text-field v-model="addEventData.details" dense type="text" label="Details"></v-text-field>
+                    <v-text-field v-model="addEventData.details" dense type="text" label="Please add details"></v-text-field>
                     <v-text-field v-model="addEventData.start" dense type="date" label="Start (required)"></v-text-field>
                     <v-text-field v-model="addEventData.end" dense type="date" label="End (required)"></v-text-field>
                     <v-color-picker v-model="addEventData.color" mode="hexa"></v-color-picker>

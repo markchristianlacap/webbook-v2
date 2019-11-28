@@ -14,6 +14,9 @@
             <v-select v-model="season" :items="seasons" label="Seasons"></v-select>
           </v-col>
           <v-col>
+            <v-select v-model="year" :items="years" label="Year"></v-select>
+          </v-col>
+          <v-col>
             <v-select v-model="location" :items="locations" label="Locations" multiple>
               <template v-slot:selection="{ item, index }">
                 <span v-if="index === 0">{{ item | truncate(9) }}</span>
@@ -61,6 +64,14 @@
               <apexchart type="pie" :options="pieOptions" :series="pie" />
             </v-flex>
           </v-layout>
+          <v-row>
+            <v-col md="6" lg="6">
+              <apexchart type="bar" height="350" :options="chemicalsChartOptions" :series="chemicalsData" />
+            </v-col>
+            <v-col md="6" lg="6">
+              <apexchart type="bar" height="350" :options="fertilizersChartOptions" :series="fertilizersData" />
+            </v-col>
+          </v-row>
           <span class="subheading primary--text ma-1">*Note: Locations that are not included in the list has no existing record in the database.</span>
         </v-card>
       </v-card>
@@ -70,18 +81,32 @@
 
 <script>
 import sidebar from "@/components/Sidebar"
+const format = val => {
+  let total = parseInt(val)
+    .toString()
+    .split(".")
+  total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  total = total.join(".")
+  return total
+}
 export default {
   components: { sidebar },
   data: () => ({
     seasons: ["All", "Main Crop", "Second Crop"],
     crop: "All",
     season: "All",
+    year: "All",
     location: [],
     variety: [],
     chemical: [],
     fertilizer: []
   }),
   computed: {
+    years() {
+      const years = ["All"]
+      years.push(...this.$store.getters.years)
+      return years
+    },
     crops() {
       const crops = ["All"]
       crops.push(...this.$store.state.crops)
@@ -106,6 +131,7 @@ export default {
       let farmers = this.$store.state.farmers
       if (this.crop !== "All") farmers = farmers.filter(farmer => farmer.Crop == this.crop)
       if (this.season !== "All") farmers = farmers.filter(farmer => farmer.Season == this.season)
+      if (this.year !== "All") farmers = farmers.filter(farmer => farmer.Year == this.year)
       if (this.variety.length) {
         let newFamers = []
         this.variety.forEach(variety => {
@@ -146,18 +172,141 @@ export default {
       return {
         labels: this.locations,
         title: {
-          text: "Current numbers of hectares per barangay",
+          text: "Current numbers of hectares per location",
           align: "left"
         },
         tooltip: {
           y: {
             formatter: function(val) {
-              let total = parseInt(val)
-                .toString()
-                .split(".")
-              total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              total = total.join(".")
-              return total + " hectares"
+              return format(val) + " hectares"
+            }
+          }
+        }
+      }
+    },
+    fertilizersData() {
+      let data = []
+      this.fertilizers.forEach(fertilizer => {
+        let count = this.farmers.filter(f => f.Fertilizers.includes(fertilizer)).map(f => f.Total)
+        count = count.length ? count.reduce((a, b) => a + b) : 0
+        data.push(count)
+      })
+      return [{ data }]
+    },
+    fertilizersChartOptions() {
+      return {
+        plotOptions: {
+          bar: {
+            barHeight: "100%",
+            horizontal: true,
+            dataLabels: {
+              position: "bottom"
+            }
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          textAnchor: "start",
+          style: {
+            colors: ["#eee"]
+          },
+          formatter: function(val, opt) {
+            return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val + " bags"
+          },
+          offsetX: 0,
+          dropShadow: {
+            enabled: true
+          }
+        },
+        stroke: {
+          width: 1,
+          colors: ["#fff"]
+        },
+        xaxis: {
+          categories: this.fertilizers
+        },
+        yaxis: {
+          labels: {
+            show: false
+          }
+        },
+        title: {
+          text: "Production of crops based on fertilizers used",
+          align: "center",
+          floating: true
+        },
+        tooltip: {
+          theme: "dark",
+          y: {
+            title: {
+              formatter: () => ""
+            },
+            formatter: function(val) {
+              return format(val) + " bags"
+            }
+          }
+        }
+      }
+    },
+    chemicalsData() {
+      let data = []
+      this.chemicals.forEach(chemical => {
+        let count = this.farmers.filter(f => f.Chemicals.includes(chemical)).map(f => f.Total)
+        count = count.length ? count.reduce((a, b) => a + b) : 0
+        data.push(count)
+      })
+      return [{ data }]
+    },
+    chemicalsChartOptions() {
+      return {
+        plotOptions: {
+          bar: {
+            barHeight: "100%",
+            horizontal: true,
+            dataLabels: {
+              position: "bottom"
+            }
+          }
+        },
+        dataLabels: {
+          enabled: true,
+          textAnchor: "start",
+          style: {
+            colors: ["#eee"]
+          },
+          formatter: function(val, opt) {
+            return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val + " bags"
+          },
+          offsetX: 0,
+          dropShadow: {
+            enabled: true
+          }
+        },
+        stroke: {
+          width: 1,
+          colors: ["#fff"]
+        },
+        xaxis: {
+          categories: this.chemicals
+        },
+        yaxis: {
+          labels: {
+            show: false
+          }
+        },
+        title: {
+          text: "Production of crops based on chemicals used",
+          align: "center",
+          floating: true
+        },
+        tooltip: {
+          theme: "dark",
+          y: {
+            title: {
+              formatter: () => ""
+            },
+            formatter: function(val) {
+              return format(val) + " bags"
             }
           }
         }
@@ -190,16 +339,11 @@ export default {
         dataLabels: {
           enabled: true,
           formatter: function(val) {
-            let total = parseInt(val)
-              .toString()
-              .split(".")
-            total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            total = total.join(".")
-            return total + " bags"
+            return format(val) + " bags"
           }
         },
         title: {
-          text: "Statistic of harvested crops",
+          text: "Statistics of harvested crops per location",
           align: "center"
         },
 
@@ -218,12 +362,7 @@ export default {
           theme: "dark",
           y: {
             formatter: function(val) {
-              let total = parseInt(val)
-                .toString()
-                .split(".")
-              total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              total = total.join(".")
-              return total + " bags"
+              return format(val) + " bags"
             }
           }
         }

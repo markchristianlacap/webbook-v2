@@ -6,7 +6,7 @@
           <img src="@/assets/img/palay.png" alt="Vuetify.js" height="100" />
 
           <h1 class="shadow mb-2 font-weight-bold shadow">TIPS FOR PRODUCING QUALITY CROPS</h1>
-          <!-- <div class="subheading mb-4 text-center">Keep track of your farm</div> -->
+          <div class="shadow subheading mb-4 text-center">Tips are submitted by different users of agribook</div>
         </v-layout>
       </v-parallax>
     </section>
@@ -43,7 +43,6 @@
         </v-flex>
       </v-layout>
     </v-flex>
-    <!-- New Tips Dialog -->
     <v-dialog v-model="dialog" width="500" persistent>
       <v-card>
         <v-toolbar dark color="primary">
@@ -81,7 +80,6 @@
     </v-dialog>
   </div>
 </template>
-
 <script>
 import firebase from "@/firebase"
 import "firebase/firestore"

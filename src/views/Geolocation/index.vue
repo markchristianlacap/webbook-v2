@@ -88,8 +88,3 @@ export default {
   }
 }
 </script>
-<style>
-.scroll {
-  overflow-y: auto;
-}
-</style>

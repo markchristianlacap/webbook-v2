@@ -1,5 +1,6 @@
 <template>
   <v-layout class="pa-1">
+    <!-- <v-btn @click="s">save</v-btn> -->
     <v-flex xs12 md2>
       <sidebar />
     </v-flex>
@@ -22,25 +23,45 @@
                     </v-col>
                     <v-col class="mx-auto my-auto">
                       <v-row>
-                        <p :class="`headline font-weight-bold ${item.color}--text`">{{ item.label }}</p>
+                        <p :class="`headline font-weight-bold primary--text`">{{ item.label }}</p>
                       </v-row>
                       <v-row>
-                        <p :class="`display-1 ${item.color}--text`" v-text="item.table ? getCount(item.table) : item.value"></p>
+                        <p :class="`display-1 primary--text`" v-text="item.value"></p>
                       </v-row>
                     </v-col>
                   </v-row>
                 </v-card>
               </template>
-              <span> <v-icon :color="item.color" small>fa-leaf</v-icon> View {{ item.label }}</span>
+              <span class="primary--text"><v-icon color="primary" small>fa-leaf</v-icon> View {{ item.label }}</span>
             </v-tooltip>
           </v-col>
         </v-row>
         <v-row>
-          <v-col lg="6">
-            <apexchart type="bar" :options="chartOptions" :series="series" />
+          <v-col lg="6" md="6">
+            <v-card elevation="4" class="pa-2">
+              <apexchart type="line" :options="statOptions" :series="stat" />
+            </v-card>
           </v-col>
-          <v-col lg="6">
-            <apexchart type="line" height="350" :options="chartOptions2" :series="graph" />
+          <v-col>
+            <v-card elevation="5" class="mx-auto">
+              <v-toolbar flat>
+                <v-toolbar-title><v-btn text color="primary" to="/Events">Upcoming Schedules</v-btn></v-toolbar-title>
+              </v-toolbar>
+              <v-list three-line class="scroll" height="345">
+                <template v-for="(item, i) in schedules">
+                  <v-list-item :key="i">
+                    <v-list-item-avatar>
+                      <v-img :src="require(`@/assets/img/${item.name == 'Rice' ? 'palay.png' : 'corn.svg'}`)"></v-img>
+                    </v-list-item-avatar>
+                    <v-list-item-content>
+                      <v-list-item-title v-text="item.name"></v-list-item-title>
+                      <v-list-item-subtitle v-text="item.details"></v-list-item-subtitle>
+                      <span class="caption font-weight-black primary--text">{{ item.start }} to {{ item.end }}</span>
+                    </v-list-item-content>
+                  </v-list-item>
+                </template>
+              </v-list>
+            </v-card>
           </v-col>
         </v-row>
       </v-card>
@@ -49,105 +70,76 @@
 </template>
 <script>
 import sidebar from "@/components/Sidebar"
+import moment from "moment"
+const now = moment()
+const format = val => {
+  let total = parseInt(val)
+    .toString()
+    .split(".")
+  total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  total = total.join(".")
+  return total
+}
+function compare(a, b) {
+  // Use toUpperCase() to ignore character casing
+  const startA = moment(a.start)
+  const startB = moment(b.start)
 
+  let comparison = 0
+  if (startA > startB) {
+    comparison = 1
+  } else if (startA < startB) {
+    comparison = -1
+  }
+  return comparison
+}
 export default {
   components: {
     sidebar
   },
   data: () => ({
-    loading: true,
-    years: [2014, 2015, 2016, 2017, 2018, 2019],
-    cards: [
-      { label: "Farmers", value: 0, img: require("@/assets/img/farmer.svg"), color: "primary", route: "Production" },
-      { label: "Places", table: "location", img: require("@/assets/img/location.svg"), color: "primary", route: "Geolocation" },
-      { label: "Tips", table: "tips", img: require("@/assets/img/palay.png"), color: "primary", route: "Tips" },
-      { label: "Areas", value: 0, img: require("@/assets/img/soil.svg"), color: "primary", route: "Analytics" }
-    ],
-    series: [
-      {
-        data: []
-      }
-    ],
-    chartOptions: {
-      plotOptions: {
-        bar: {
-          barHeight: "100%",
-          distributed: true,
-          horizontal: true,
-          dataLabels: {
-            position: "bottom"
-          }
-        }
-      },
-      dataLabels: {
-        enabled: true,
-        textAnchor: "start",
-        style: {
-          colors: ["black"]
-        },
-        formatter: function(val, opt) {
-          return opt.w.globals.labels[opt.dataPointIndex] + " :  " + val
-        },
-        offsetX: 0,
-        dropShadow: {
-          enabled: false
-        }
-      },
-      stroke: {
-        width: 0.5,
-        colors: ["#fff"]
-      },
-      xaxis: {
-        categories: []
-      },
-      yaxis: {
-        labels: {
-          show: false
-        }
-      },
-      title: {
-        text: "OVERALL FARMERS",
-        align: "center",
-        floating: true
-      },
-      subtitle: {
-        text: "Category are divided in every barangay",
-        align: "center"
-      },
-      tooltip: {
-        theme: "dark",
-        x: {
-          show: true
-        },
-        y: {
-          title: {
-            formatter: function() {
-              return "Count: "
-            }
-          }
-        }
-      }
-    }
+    loading: true
   }),
   computed: {
-    graph() {
-      const data = this.farmers
-      data.push(...this.$store.state.corn)
-      data.push(...this.$store.state.rice)
-      const crops = ["Rice", "Corn"]
+    schedules() {
+      const schedules = this.$store.getters.schedules.filter(sched => moment(sched.end) > now || moment(sched.end) == now).sort(compare)
+      return schedules
+    },
+    cards() {
+      return [
+        {
+          label: "Farmers",
+          value: format(this.farmers.filter((f, i, a) => i === a.findIndex(t => t.Name === f.Name && t.Location === f.Location && t.Crop === f.Crop)).length),
+          img: require("@/assets/img/farmer.svg"),
+          route: "Production"
+        },
+        { label: "Places", value: format(this.$store.state.location.length), img: require("@/assets/img/location.svg"), route: "Geolocation" },
+        { label: "Tips", value: format(this.$store.state.tips.length), img: require("@/assets/img/palay.png"), route: "Tips" },
+        {
+          label: "Areas",
+          value: format(
+            this.farmers
+              .filter((f, i, a) => i === a.findIndex(t => t.Name === f.Name && t.Location === f.Location && t.Crop === f.Crop))
+              .map(f => f.Hectares)
+              .reduce((a, b) => a + b)
+          ),
+          img: require("@/assets/img/soil.svg"),
+          route: "Analytics"
+        }
+      ]
+    },
+    years() {
+      return this.$store.getters.years
+    },
+    stat() {
       let count = 0
       let result = []
-      crops.forEach(crop => {
+      this.$store.state.crops.forEach(crop => {
         let record = { name: crop }
         let arr = []
         this.years.forEach(year => {
-          let res = data.filter(d => d.Crop == crop && d.Year == year).map(d => d.Total)
-          let num = res.length
-            ? Math.round(
-                res.reduce((a, b) => parseFloat(a) + parseFloat(b)),
-                2
-              )
-            : 0
+          let res = this.farmers.filter(d => d.Crop == crop && d.Year == year).map(d => d.Total)
+          let num = res.length ? res.reduce((a, b) => a + b) : 0
           arr.push(parseFloat(Math.round(num * 100) / 100).toFixed(2))
         })
         record.data = arr
@@ -156,93 +148,50 @@ export default {
       })
       return result
     },
-    chartOptions2() {
+    statOptions() {
       return {
-        dataLabels: {
-          enabled: true
-        },
-        stroke: {
-          width: [5, 7, 5],
-          curve: "straight"
-        },
         title: {
-          text: "Crop production Statistic",
+          text: "Crop production Statistics",
           align: "left"
-        },
-        markers: {
-          size: 0,
-
-          hover: {
-            sizeOffset: 6
-          }
         },
         xaxis: {
           categories: this.years
         },
         tooltip: {
-          y: [
-            {
-              title: {
-                formatter: function(val) {
-                  return val + " total production"
-                }
-              }
-            },
-            {
-              title: {
-                formatter: function(val) {
-                  return val + " total production"
-                }
-              }
+          theme: "dark",
+          y: {
+            formatter: function(val) {
+              return format(val) + " bags"
             }
-          ]
-        },
-        grid: {
-          borderColor: "#f1f1f1"
+          }
         }
       }
     },
-    locationNames() {
+    locations() {
       return this.$store.getters.locations
     },
     farmers() {
-      return this.$store.state.farmers.filter((thing, index, self) => index === self.findIndex(t => t.Name === thing.Name && t.Location === thing.Location && t.Crop === thing.Crop))
+      return this.$store.state.farmers
     }
   },
   async created() {
     if (!this.$store.state.location.length) await this.$store.dispatch("get", "location")
     if (!this.$store.state.tips.length) await this.$store.dispatch("get", "tips")
     if (!this.$store.state.farmers.length) await this.$store.dispatch("get", "farmers")
-    this.init()
+    if (!this.$store.state.schedules.length) await this.$store.dispatch("get", "schedules")
     this.loading = false
   },
   methods: {
-    init() {
-      function compare(a, b) {
-        const yearA = a.Year
-        const yearB = b.Year
-        return yearA > yearB ? -1 : 1
-      }
-      this.$store.state.farmers.sort(compare)
-      this.chartOptions.xaxis.categories = this.locationNames
-      this.cards[0].value = this.farmers.length
-      let total = 0
-      this.farmers.forEach(f => (total += f.Hectares))
-      total = parseInt(total)
-        .toString()
-        .split(".")
-      total[0] = total[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-      this.cards[3].value = total.join(".")
-      let count = 0
-      this.locationNames.forEach(location => {
-        let total = this.farmers.filter(farmer => farmer.Location == location).length
-        this.series[0].data[count] = total
-        count++
-      })
-    },
-    getCount(payload) {
-      return this.$store.state[payload].length
-    }
+    // s() {
+    //   try {
+    //     this.$store.state.farmers.forEach(async farmer => {
+    //       await db.collection("farmers").add(farmer)
+    //       console.log("a")
+    //     })
+    //   } catch (e) {
+    //     console.log(e)
+    //   }
+    // }
   }
 }
 </script>
