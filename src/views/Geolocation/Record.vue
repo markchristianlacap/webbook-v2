@@ -3,27 +3,33 @@
     <v-flex xs6 md2> <sidebar /> </v-flex>
     <v-flex>
       <v-card class="pa-2">
-        <div>
-          <h1 class="title grey--text">Records of {{ brgy }}</h1>
-          <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }} ha</span><br />
-          <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }} bags</span><br />
-          <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }} bags</span><br />
-          <span class="body-2"><strong>Overall</strong>: {{ getTotal | accounting }} bags</span><br />
-          <v-simple-table v-if="farmers.length">
-            <template v-slot:default>
-              <thead>
-                <tr>
-                  <th v-for="name in headers" :key="name" class="text-left">{{ name }}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(person, i) in farmers" :key="i">
-                  <td v-for="head in headers" :key="head">{{ person[head] }}</td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table>
-        </div>
+        <v-row>
+          <v-col>
+            <h1 class="title grey--text">Records of {{ brgy }}</h1>
+            <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }} ha</span><br />
+            <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }} bags</span><br />
+            <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }} bags</span><br />
+            <span class="body-2"><strong>Overall</strong>: {{ getTotal | accounting }} bags</span><br />
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col>
+            <v-btn color="primary" small><v-icon class="fa-fw" small>fa-file-download</v-icon>Download record</v-btn>
+          </v-col>
+        </v-row>
+        <v-simple-table v-if="farmers.length">
+          <template v-slot:default>
+            <thead>
+              <tr>
+                <th v-for="name in headers" :key="name" class="text-left">{{ name }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(person, i) in farmers" :key="i">
+                <td v-for="head in headers" :key="head">{{ person[head] }}</td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
       </v-card>
     </v-flex>
   </v-layout>

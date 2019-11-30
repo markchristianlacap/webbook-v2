@@ -9,46 +9,48 @@
         </v-layout>
       </v-parallax>
     </section>
-    <v-flex>
-      <v-layout v-if="user">
-        <v-spacer></v-spacer>
-        <v-btn color="primary" text @click="dialog = true">
-          <v-icon left>fa-plus</v-icon>
-          <span>Add tips</span>
-        </v-btn>
-      </v-layout>
-      <v-sheet v-if="loading" class="pa-5">
+    <v-container>
+      <v-sheet v-if="loading">
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
         <v-skeleton-loader class="mx-auto" type="card"></v-skeleton-loader>
       </v-sheet>
-      <v-container v-else>
-        <p class="subheading text-end">Found {{ tips.length }} tips</p>
-        <v-layout row wrap c>
-          <v-flex v-for="(tip, i) in tips" :key="i" xs12 sm12 md12 class="my-1">
-            <v-layout row wrap>
-              <v-flex xs4 sm4 md2>
-                <v-img class="mx-auto my-auto" height="100" :src="tip.src"></v-img>
-              </v-flex>
-              <v-flex xs8 sm8 md10>
-                <v-card-title primary-title>
+      <v-layout v-else row>
+        <v-row cols="12">
+          <v-col sm="12" md="2">
+            <p class="title primary white--text pa-2">FOUND {{ tips.length }} TIPS</p>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col md="2">
+            <v-text-field v-model="query" dense label="Search tips"></v-text-field>
+          </v-col>
+          <v-col v-if="user" md="2">
+            <v-btn small color="primary" @click="dialog = true"> <v-icon left>fa-plus</v-icon>Add tip </v-btn>
+          </v-col>
+        </v-row>
+        <v-flex v-for="(tip, i) in tips" :key="i" xs12 sm12 md12 class="my-1">
+          <v-layout row wrap>
+            <v-flex xs4 sm4 md2>
+              <v-img class="mx-auto my-auto" height="100" :src="tip.src"></v-img>
+            </v-flex>
+            <v-flex xs8 sm8 md10>
+              <v-card-title primary-title>
+                <div>
                   <div>
-                    <div class="title primary--text font-weight-black">
-                      <router-link :to="`/Tips/${tip.id}`">{{ tip.Title }}</router-link>
-                    </div>
-                    <div class="grey--text caption"><span class="font-weight-bold">Written by:</span> {{ tip.Author }}</div>
-                    <div class="grey--text caption"><span class="font-weight-bold">Date added:</span> {{ tip.Date }}</div>
+                    <router-link style="text-decoration:none" class="primary--text text--darken-2" :to="`/Tips/${tip.id}`">{{ tip.Title }}</router-link>
                   </div>
-                </v-card-title>
-              </v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-flex>
+                  <div class="grey--text text--darken-2 caption"><span class="font-weight-bold">Written by:</span> {{ tip.Author }}</div>
+                  <div class="grey--text text--darken-2 caption"><span class="font-weight-bold">Date added:</span> {{ tip.Date }}</div>
+                </div>
+              </v-card-title>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-container>
     <v-dialog v-model="dialog" width="500" persistent>
       <v-card>
         <v-toolbar dark color="primary">
-          <v-toolbar-title>Add Tips</v-toolbar-title>
+          <v-toolbar-title>Create new Tip</v-toolbar-title>
         </v-toolbar>
         <v-form ref="form" class="px-3">
           <v-card-text>
@@ -94,13 +96,16 @@ export default {
     dialog: false,
     tip: {},
     loadingBtn: false,
+    query: "",
     image: null,
     imageURL: "",
     imageRequired: ""
   }),
   computed: {
     tips() {
-      return this.$store.state["public-tips"]
+      let tips = this.$store.state["public-tips"]
+      if (this.query) tips = tips.filter(tip => tip.Content.includes(this.query) || tip.Title.includes(this.query))
+      return tips
     },
     user() {
       return this.$store.state.user

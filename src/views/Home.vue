@@ -80,7 +80,7 @@
           <v-flex xs12 sm6>
             <v-card flat class="transparent">
               <v-card-title primary-title class="layout">
-                <div class="headline primary white--text pa-1">AGRIBOOK INFO</div>
+                <div class="headline primary dark--text pa-1">AGRIBOOK INFO</div>
               </v-card-title>
               <v-card-text>
                 Agriculture in the Philippines has always been associated with manual labor and backward traditional farming methods. For the Department of Agriculture (DA), the stigma of farming
