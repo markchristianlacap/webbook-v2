@@ -44,10 +44,10 @@
           </v-col>
           <v-col>
             <v-card elevation="5" class="mx-auto">
-              <v-toolbar flat>
+              <v-toolbar dense flat>
                 <v-toolbar-title><v-btn text color="primary" to="/Events">Upcoming Schedules</v-btn></v-toolbar-title>
               </v-toolbar>
-              <v-list three-line class="scroll" height="345">
+              <v-list three-line class="scroll" height="48.5vh">
                 <template v-for="(item, i) in schedules">
                   <v-list-item :key="i">
                     <v-list-item-avatar>

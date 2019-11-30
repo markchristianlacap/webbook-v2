@@ -3,19 +3,16 @@
     <v-flex xs6 md2> <sidebar /> </v-flex>
     <v-flex>
       <v-card class="pa-2">
-        <v-row>
-          <v-col>
-            <h1 class="title grey--text">Records of {{ brgy }}</h1>
-            <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }} ha</span><br />
-            <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }} bags</span><br />
-            <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }} bags</span><br />
-            <span class="body-2"><strong>Overall</strong>: {{ getTotal | accounting }} bags</span><br />
-          </v-col>
+        <v-layout>
+          <h1 class="title grey--text">Records of {{ brgy }}</h1>
           <v-spacer></v-spacer>
-          <v-col>
-            <v-btn color="primary" small><v-icon class="fa-fw" small>fa-file-download</v-icon>Download record</v-btn>
-          </v-col>
-        </v-row>
+          <v-btn color="primary" small @click="download(farmers)"><v-icon class="fa-fw" small>fa-file-download</v-icon>Download record</v-btn>
+        </v-layout>
+        <span class="body-2"><strong>Total Hectares</strong>: {{ totalHectares | accounting }} ha</span><br />
+        <span class="body-2"><strong>Total Corn Production</strong>: {{ totalCorn | accounting }} bags</span><br />
+        <span class="body-2"><strong>Total Rice Production</strong>: {{ totalRice | accounting }} bags</span><br />
+        <span class="body-2"><strong>Overall Production</strong>: {{ getTotal | accounting }} bags</span><br />
+
         <v-simple-table v-if="farmers.length">
           <template v-slot:default>
             <thead>
@@ -37,6 +34,7 @@
 
 <script>
 import sidebar from "@/components/Sidebar"
+import XLSX from "xlsx"
 export default {
   components: { sidebar },
   props: {
@@ -78,7 +76,46 @@ export default {
   async created() {
     if (!this.$store.state.farmers.length) await this.$store.dispatch("get", "farmers")
   },
-  methods: {}
+  methods: {
+    download(data) {
+      data = data.filter(value => {
+        delete value.id
+        delete value.AuthID
+        return value
+      })
+      let record = []
+      data.forEach(d => {
+        const obj = {}
+        this.headers.forEach(h => {
+          obj[h] = d[h]
+        })
+        record.push(obj)
+      })
+      const wb = XLSX.utils.book_new()
+      let o = `${this.brgy}.xlsx`
+      const Heading = [
+        [this.brgy],
+        ["Total Hectares:", this.$options.filters.accounting(this.totalHectares)],
+        ["Total Corn Production:", this.$options.filters.accounting(this.totalCorn)],
+        ["Total Rice Production:", this.$options.filters.accounting(this.totalRice)],
+        ["Overall Production:", this.$options.filters.accounting(this.getTotal)]
+      ]
+      console.log(record)
+      var ws = XLSX.utils.aoa_to_sheet(Heading)
+      XLSX.utils.sheet_add_json(ws, record, {
+        origin: 5
+      })
+      XLSX.utils.book_append_sheet(wb, ws, "Production")
+      XLSX.writeFile(wb, o)
+    },
+    editItem(item) {
+      this.editedIndex = this.farmers.indexOf(item)
+      this.editedItem = Object.assign({}, item)
+      this.editedItem.Chemicals = this.editedItem.Chemicals.split(",")
+      this.editedItem.Fertilizers = this.editedItem.Fertilizers.split(",")
+      this.dialog = true
+    }
+  }
 }
 </script>
 
