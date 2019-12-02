@@ -38,7 +38,7 @@
                   <div>
                     <router-link style="text-decoration:none" class="primary--text text--darken-2" :to="`/Tips/${tip.id}`">{{ tip.Title }}</router-link>
                   </div>
-                  <div class="grey--text text--darken-2 caption"><span class="font-weight-bold">Written by:</span> {{ tip.Author }}</div>
+                  <div class="grey--text text--darken-2 caption"><span class="font-weight-bold">Posted by:</span> {{ tip.Author }}</div>
                   <div class="grey--text text--darken-2 caption"><span class="font-weight-bold">Date added:</span> {{ tip.Date }}</div>
                 </div>
               </v-card-title>
@@ -82,15 +82,18 @@
         </v-form>
       </v-card>
     </v-dialog>
+    <Footer />
   </div>
 </template>
 <script>
+import Footer from "@/components/Footer"
 import firebase from "@/firebase"
 import "firebase/firestore"
 import "firebase/storage"
 const db = firebase.firestore()
 
 export default {
+  components: { Footer },
   data: () => ({
     loading: true,
     dialog: false,

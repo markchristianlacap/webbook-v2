@@ -17,6 +17,7 @@
             <span class="text-none"><v-icon x-small>fa-plus</v-icon> New Record</span>
           </v-btn>
         </v-layout>
+        <span class="primary--text">Main Crop</span> = Wet Season <span class="warning--text">Second Crop</span> = Dry Season
         <v-row>
           <v-col>
             <v-select v-model="crop" :items="crops" label="Crops"></v-select>
@@ -137,9 +138,9 @@
               <v-icon small color="primary" class="mr-2" @click="editItem(item)">
                 fa-edit
               </v-icon>
-              <v-icon small color="primary" @click="deleteItem(item)">
+              <!-- <v-icon small color="primary" @click="deleteItem(item)">
                 fa-trash
-              </v-icon>
+              </v-icon> -->
             </template>
             <template v-slot:no-data>
               <v-btn color="primary" @click="$store.dispatch('get', 'farmers')">Refresh</v-btn>

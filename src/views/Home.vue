@@ -127,26 +127,16 @@
         </v-flex>
       </v-layout>
     </section>
-    <v-footer color="primary darken-2 pa-4">
-      <v-row>
-        <v-col md6>
-          <v-container class="white--text ml-2">
-            <strong class="title">AGRIBOOK</strong><br />
-            <strong>Contact us:</strong><br />
-            <span class="caption"><v-icon small class="fa-fw" color="white">fa-envelope</v-icon> &nbsp; cycymanzano1@gmail.com</span><br />
-            <span class="caption"><v-icon small class="fa-fw" color="white">fa-phone</v-icon> &nbsp;09355149849</span>
-          </v-container>
-        </v-col>
-      </v-row>
-    </v-footer>
+    <Footer />
   </div>
 </template>
 
 <script>
 import team from "@/assets/JSON/team.json"
+import Footer from "@/components/Footer"
 export default {
   name: "Home",
-  components: {},
+  components: { Footer },
   data: () => ({
     team
   }),
