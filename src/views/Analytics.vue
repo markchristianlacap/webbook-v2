@@ -6,7 +6,17 @@
     <v-flex xs12>
       <v-card class="pa-2">
         <p class="display-1 font-weight-black grey--text text-center">Crop monitoring analytics</p>
-        <v-row>
+        <v-row wrap>
+          <v-col>
+            <v-select v-model="farmer" :items="farmersName" label="Farmers" multiple>
+              <template v-slot:selection="{ item, index }">
+                <p class=" text-truncate">
+                  <span v-if="index === 0">{{ item | truncate(5) }}</span>
+                  <span v-if="index === 1" class="grey--text caption">(+{{ farmer.length - 1 }})</span>
+                </p>
+              </template>
+            </v-select>
+          </v-col>
           <v-col>
             <v-select v-model="crop" :items="crops" label="Crops"></v-select>
           </v-col>
@@ -96,6 +106,7 @@ export default {
     crop: "All",
     season: "All",
     year: "All",
+    farmer: [],
     location: [],
     variety: [],
     chemical: [],
@@ -121,6 +132,9 @@ export default {
     varieties() {
       return this.$store.getters.varieties
     },
+    farmersName() {
+      return this.$store.state.farmers.map(farmer => farmer.Name)
+    },
     chemicals() {
       return this.$store.getters.chemicals
     },
@@ -132,6 +146,14 @@ export default {
       if (this.crop !== "All") farmers = farmers.filter(farmer => farmer.Crop == this.crop)
       if (this.season !== "All") farmers = farmers.filter(farmer => farmer.Season == this.season)
       if (this.year !== "All") farmers = farmers.filter(farmer => farmer.Year == this.year)
+      if (this.farmer.length) {
+        let newFamers = []
+        this.farmer.forEach(name => {
+          let filter = farmers.filter(farmer => farmer.Name == name)
+          newFamers.push(...filter)
+        })
+        farmers = newFamers
+      }
       if (this.variety.length) {
         let newFamers = []
         this.variety.forEach(variety => {
