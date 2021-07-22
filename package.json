@@ -19,7 +19,7 @@
     "vue2-leaflet": "^2.2.1",
     "vuetify": "^2.1.12",
     "vuex": "^3.0.1",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
