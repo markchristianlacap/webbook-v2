@@ -11,7 +11,7 @@
     "core-js": "^3.4.4",
     "firebase": "^8.5.0",
     "leaflet": "^1.6.0",
-    "marked": "^2.0.3",
+    "marked": "^4.0.10",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-apexcharts": "^1.5.1",
